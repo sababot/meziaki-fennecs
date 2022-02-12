@@ -1,18 +1,11 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Monaco', monospace;
+    font-family: -apple-system, 'Monaco';
 }
+
 body {
     background-color: #ffcb77;
-}
-header {
-    height: 50px;
-    background: transparent;
-    width: 100%;
-    position: middle;
-    text-align: center;
-    
 }
 
 .header {
@@ -29,25 +22,30 @@ header {
   padding: 12px;
   text-decoration: none;
   font-size: 18px;
-  line-height: 25px;
-  border-radius: 4px;
+  line-height: 5px;
+  border-radius: 1px;
 }
 
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
 .header a.logo {
   font-size: 25px;
   font-weight: bold;
+
 }
 
 /* Change the background color on mouse-over */
 .header a:hover {
   background-color: #ddd;
+  border: groove;
+  border-width: 1.5px;
+  line-height: 1px;
+  border-color: black;
   color: black;
 }
 
 /* Style the active/current link*/
 .header a.active {
-  background-color: dodgerblue;
+  background-color: #FE6D73;
   color: white;
 }
 
@@ -73,10 +71,10 @@ header {
     
     padding: 25px;
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 25px;
     background-color: #ffcb77;
     color: #444;
-    grid-template-rows: repeat(3, 200px);
+    grid-template-rows: repeat(3, 225px);
     grid-template-columns: repeat(5, 200px);
 }
 
