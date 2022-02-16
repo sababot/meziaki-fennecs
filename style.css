@@ -95,7 +95,7 @@ body {
   appearance: none;
   width: 100%; /* Full-width */
   height: 0.5vh; /* Specified height */
-  background: #F4A261; /* Grey background */
+  background: #E76F51; /* Grey background */
   outline: none; /* Remove outline */
   opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: .2s; /* 0.2 seconds transition on hover */
@@ -110,7 +110,7 @@ body {
   appearance: none;
   width: 1.75vh; /* Set a specific slider handle width */
   height: 1vh; /* Slider handle height */
-  background: #F4A261; /* Green background */
+  background: #E76F51; /* Green background */
   cursor: pointer; /* Cursor on hover */
   border-radius: 100%;
 }
@@ -129,7 +129,7 @@ body {
 /* Style the header links */
 .header a {
   float: left;
-  color: #F4A261;
+  color: #E76F51;
   text-align: center;
   padding-left: 12px;
   padding-right: 12px;
@@ -146,7 +146,7 @@ body {
 .header a.logo {
   font-size: 1.75vw;
   font-weight: bold;
-  color: #F4A261;
+  color: #E76F51;
 }
 
 /* Change the background color on mouse-over */
@@ -166,7 +166,7 @@ body {
 
 .header .button div {
   float: left;
-  color: #F4A261;
+  color: #E76F51;
   text-align: center;
   font-size: 1.75vw;
   padding: 0px;
@@ -202,7 +202,7 @@ body {
     font-family: monospace;
     font-size: 25px;
     margin: 0 10px;
-    color: #F4A261;
+    color: #E76F51;
 }
 nav {
     float: middle;
