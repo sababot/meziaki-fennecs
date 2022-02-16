@@ -1,17 +1,11 @@
-@font-face {
-  font-family: pixel-font;
-  src: url(https://dl.dafont.com/dl/?f=dogica);
-}
-
 * {
     margin: 0;
     padding: 0;
-    font-family: pixel-font;
+    font-family: 'Press Start 2P', cursive;
 }
 body {
     background-color: lightblue;
     overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 .wrapper {
@@ -74,17 +68,19 @@ body {
   color: #ff0000;
 }
 
-#container {
-    
+#pinContainer {
+  overflow: hidden;
 }
+
 #slideContainer {
-    width: 400%; /* to contain 4 panels, each with 100% of window width */
-    height: 100%;
+  width: 400%; /* to contain 4 panels, each with 100% of window width */
+  height: 100%;
 }
+
 .panel {
-    height: 100%;
-    width: 25%; /* relative to parent -> 25% of 400% = 100% of window width */
-    float: left;
+  height: 100%;
+  width: 25%; /* relative to parent -> 25% of 400% = 100% of window width */
+  float: left;
 }
 
 .journey-slider {
@@ -128,7 +124,6 @@ body {
   padding: 1.5vw 1vh;
   position: relative;
   transition: all 0s;
-  padding-bottom: 50vh;
 }
 
 /* Style the header links */

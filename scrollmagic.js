@@ -22,6 +22,6 @@ new ScrollMagic.Scene({
 		triggerElement: "#start",
 		duration: "500%"
 	})
-	.setPin("#container")
+	.setPin("#pinContainer")
 	.setTween(wipeAnimation)
 	.addTo(controller);
