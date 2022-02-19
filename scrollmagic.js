@@ -19,7 +19,6 @@ var wipeAnimation = new TimelineMax()
 	.to("#slideContainer", 0.5, {z: 0});
 
 new ScrollMagic.Scene({
-		triggerElement: "#start",
 		duration: "500%"
 	})
 	.setPin("#pinContainer")

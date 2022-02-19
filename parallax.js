@@ -9,18 +9,8 @@ window.addEventListener('resize', function(){
     canvas.height = window.innerHeight;
 })
 
-window.addEventListener('wheel', function(e){
-    e.preventDefault();
-
-    for (var i = 0; i < backgroundArray.length; i++){
-        backgroundArray[i].dx = -1 * e.deltaY * 0.5;
-    }
-})
-
 window.onscroll = function(e){
     window.addEventListener('wheel', function(e){
-        e.preventDefault();
-
         for (var i = 0; i < backgroundArray.length; i++){
             backgroundArray[i].dx = -1 * e.deltaY * 0.5;
         }
@@ -56,8 +46,6 @@ function background(speed, source){
     }
 
     this.update = function(){
-        console.log(this.target_x);
-
         this.x += this.dx * speed;
 
         if (this.x > 0){
