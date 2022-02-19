@@ -18,6 +18,7 @@ window.onscroll = function(e){
 }
 
 var length = 3;
+var count = 20;
 
 function background(speed, source){
 
@@ -65,6 +66,28 @@ function background(speed, source){
         else{
             this.dx = 0;
         }
+
+        this.draw();
+    }
+}
+
+function nft_meteorites(source){
+    this.x = Math.floor(Math.random() * canvas.width);
+    this.y = 0;
+    this.dx = -5;
+    this.dy = (Math.random() * 15) + 5;
+
+    this.source = source;
+
+    this.draw = function(){
+        var img = new Image();
+        img.src = this.source;
+        c.drawImage(img, this.x, this.y, (window.innerWidth / 100) * 5, (window.innerWidth / 100) * 5);
+    }
+
+    this.update = function(){
+        this.x += this.dx;
+        this.y += this.dy;
 
         this.draw();
     }
