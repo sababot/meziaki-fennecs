@@ -47,7 +47,7 @@ function background(speed, source){
     }
 
     this.update = function(){
-        this.x += this.dx * speed;
+        this.x += this.dx * this.speed;
 
         if (this.x > 0){
             this.x = 0;
@@ -55,16 +55,6 @@ function background(speed, source){
 
         if (this.x < -1 * (this.width * length * this.speed) + (this.width * this.speed)){
             this.x = -1 * (this.width * length * this.speed) + (this.width * this.speed);
-        }
-
-        if (this.target_x > this.x){
-            this.dx = 5;
-        }
-        else if (this.target_x < this.x){
-            this.dx = -5;
-        }
-        else{
-            this.dx = 0;
         }
 
         this.draw();
@@ -96,8 +86,8 @@ function nft_meteorites(source){
 var backgroundArray = [];
 
 backgroundArray.push(new background(1, "images/background1.png"));
-backgroundArray.push(new background(2, "images/background3.png"));
-backgroundArray.push(new background(3, "images/background2.png"));
+backgroundArray.push(new background(3, "images/background3.png"));
+backgroundArray.push(new background(5, "images/background2.png"));
 
 function animate(){
     requestAnimationFrame(animate);
