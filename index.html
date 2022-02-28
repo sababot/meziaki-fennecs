@@ -48,13 +48,14 @@
 				        </div>
 				    </div>
 				  	<div class="header-right" style="padding-right: 0%;">
-				    	<a href="fennecs.html">Mint</a>
-				    	<a href="fennecs.html">Fennecs</a>
+				    	<a class="active" href="">Home</a>
+				    	<a href="fennecs.html">Explore</a>
+				    	<a href="fennecs.html">Store</a>
 				    	<a href="roadmap.html">Team</a>
 				  	</div>
 				</div>
 				<p style="padding-top: 30vh;"></p>
-				<p style="text-align: center; color: #E76F51; font-size: 4vh; padding-top: 10vh;">An Exclusive Collection on the Solana Blockchain</p>
+				<p class="mouse_move" style="text-align: center; color: #E76F51; font-size: 4vh; padding-top: 10vh;">An Exclusive Collection on the Solana Blockchain</p>
 			</section>
 			<section class="panel story">
 				<div id="background" style="padding-left: 25%; padding-right: 25%; padding-top: 25vh;">
@@ -80,5 +81,13 @@
 	<!--Scripts-->
 	<script src="parallax.js"></script>
 	<script src="scrollmagic.js"></script>
+	<script type="text/javascript">
+        const h2s = document.querySelector('.mouse_move')
+        window.addEventListener('mousemove', (evt) => {
+            const x = (window.innerWidth / 2 - evt.pageX) / 20
+            const y = (window.innerHeight / 2 - evt.pageY + window.pageYOffset) / 20
+            h2s.style.transform = `translateY(${y}px) translateX(${x}px)`
+        })
+    </script>
 </body>
 </html>

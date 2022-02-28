@@ -274,3 +274,21 @@ nav {
 .background-canvas {
   position: fixed;
 }
+
+.mouse_move {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    z-index: 10000;
+    position: relative;
+}
+
+.mouse_move p {
+    font-size: 10rem;
+    position: absolute;
+    user-select: none;
+    background: linear-gradient(45deg, rgb(25 10 255) 0%, rgb(1 148 255) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
