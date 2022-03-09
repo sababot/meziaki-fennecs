@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Meziaki Fennecs</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="style/home.css">
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/TweenMax.min.js"></script>
@@ -16,78 +16,62 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-	<!--Header-->
-
-	<canvas id="canvas" style="position: fixed; top: 0; left: 0; z-index: -1;"></canvas>
-
 	<!--Background-->
+	<canvas id="canvas"></canvas>
+
 	<!--Body-->
 	<div id="pinContainer">
 		<div id="slideContainer">
+			<!--intro-->
 			<section class="panel intro">
 				<div id="header-element" class="header">
+					<!--logo-->
 					<img src="images/logo.png" width="130" height="45" class="logo" style="padding-left: 6%;">
-				  	<div class="wrapper" style="padding-right: 6%;">
-				        <div class="button">
-				            <div class="icon">
-				                <i class="fab fa-twitter"></i>
-				            </div>
-				            <span>Twitter</span>
-				        </div>
-				        <div class="button">
-				            <div class="icon">
-				                <i class="fab fa-instagram"></i>
-				            </div>
-				            <span>Instagram</span>
-				        </div>
-				        <div class="button">
-				            <div class="icon">
-				                <i class="fab fa-github"></i>
-				            </div>
-				            <span>Github</span>
-				        </div>
-				    </div>
-				  	<div class="header-right" style="padding-right: 0%;">
+				  	
+					<!--sections-->
+				  	<div class="header-right">
 				    	<a class="active" href="">Home</a>
 				    	<a href="fennecs.html">Explore</a>
 				    	<a href="fennecs.html">Store</a>
 				    	<a href="roadmap.html">Team</a>
+				    	<a href="vis.html">Visualizer</a>
 				  	</div>
 				</div>
+
+				<!--content-->
 				<p style="padding-top: 30vh;"></p>
 				<p class="mouse_move" style="text-align: center; color: #E76F51; font-size: 4vh; padding-top: 10vh;">An Exclusive Collection on the Solana Blockchain</p>
 			</section>
+
+			<!--story-->
 			<section class="panel story">
-				<div id="background" style="padding-left: 25%; padding-right: 25%; padding-top: 25vh;">
-					<p style="color: #E76F51; font-size: 3vw; padding-bottom: 1vh;">Story</p>
-					<p style="color: white; font-size: 1.25vw; text-shadow: none;">Fennecs, or mostly known as the warriors of the Sahara are symbols of the struggle associated with living in the barren dunes littered around the largest desert in the world. What was once a geographic disadvantage, the scorching sun of these desolate lands could now inhabit the bravest of animals. Fennecs do their due diligence regarding their Eco systematic efficacy and take heavy part in turning mostly barren areas into a conjoined utopia. After the intense 1809 heat waves - the battle agains the sands was unwinnable and the world saw not only a dramatic plummet in fennec population numbers, but also the genocide of almost all desert inhabiting life forms. Now a more harmonious time- many fennecs have been spotted. Many see this as a sign; a sign showing the long-awaited resurgence of life in the great Sahara sand sea.</p>
+				<div id="background" class="background">
+					<p class="sub_heading">Story</p>
+					<p class="body">Fennecs, or mostly known as the warriors of the Sahara are symbols of the struggle associated with living in the barren dunes littered around the largest desert in the world. What was once a geographic disadvantage, the scorching sun of these desolate lands could now inhabit the bravest of animals. Fennecs do their due diligence regarding their Eco systematic efficacy and take heavy part in turning mostly barren areas into a conjoined utopia. After the intense 1809 heat waves - the battle agains the sands was unwinnable and the world saw not only a dramatic plummet in fennec population numbers, but also the genocide of almost all desert inhabiting life forms. Now a more harmonious time- many fennecs have been spotted. Many see this as a sign; a sign showing the long-awaited resurgence of life in the great Sahara sand sea.</p>
 				</div>
 			</section>
-			<section class="panel green">
-				<div id="background" style="padding-left: 25%; padding-right: 25%; padding-top: 25vh;">
-					<p style="color: #E76F51; font-size: 3vw; padding-bottom: 1.25vh;">Roadmap</p>
-					<p style="color: white; font-size: 1vw; text-shadow: none;"></p>
+			
+			<!--roadmap-->
+			<section class="panel roadmap">
+				<div id="background" class="background">
+					<p class="sub_heading">Roadmap</p>
+					<p class="body"></p>
 				</div>
 			</section>
-			<section class="panel bordeaux">
-				<div id="background" style="padding-left: 25%; padding-right: 25%; padding-top: 25vh;">
-					<p style="color: #E76F51; font-size: 3vw; padding-bottom: 1vh;">Utility</p>
-					<p style="color: white; font-size: 1.25vw; text-shadow: none;">Fennecs will be available in ...</p>
+			
+			<!--utility-->
+			<section class="panel utility">
+				<div id="background" class="background">
+					<p class="sub_heading">Utility</p>
+					<p class="body">Fennecs will be available in ...</p>
 				</div>
 			</section>
 		</div>
 	</div>
 
 	<!--Scripts-->
-	<script src="parallax.js"></script>
-	<script src="scrollmagic.js"></script>
-	<script type="text/javascript">
-        const h2s = document.querySelector('.mouse_move')
-        window.addEventListener('mousemove', (evt) => {
-            const x = (window.innerWidth / 2 - evt.pageX) / 20
-            const y = (window.innerHeight / 2 - evt.pageY + window.pageYOffset) / 20
-            h2s.style.transform = `translateY(${y}px) translateX(${x}px)`
-        })
-    </script>
+	<script src="scripts/parallax.js"></script>
+	<script src="scripts/scrollmagic.js"></script>
+	<script src="scripts/mouse_move.js"></script>
 </body>
 </html>
