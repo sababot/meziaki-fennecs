@@ -32,7 +32,7 @@ canvas {
 
 .panel {
   height: 100%;
-  width: 25%; /* relative to parent -> 25% of 400% = 100% of window width */
+  width: 100%;
   float: left;
 }
 
@@ -147,7 +147,7 @@ canvas {
 .background {
     padding-left: 25%;
     padding-right: 25%;
-    padding-top: 25vh;
+    padding-top: 50vh;
 }
 
 .sub_heading {
