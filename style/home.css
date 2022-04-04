@@ -21,15 +21,6 @@ canvas {
     z-index: -1;
 }
 
-#pinContainer {
-  overflow: hidden;
-}
-
-#slideContainer {
-  width: 400%; /* to contain 4 panels, each with 100% of window width */
-  height: 100%;
-}
-
 .panel {
   height: 100%;
   width: 100%;
@@ -47,9 +38,11 @@ canvas {
 }
 
 .header {
-  background-color: transparent;
+  background-color: #d8d1a0;
   padding: 1.5vw 1vh;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  height: 2.5vw;
   transition: all 0s;
 }
 
@@ -106,7 +99,8 @@ canvas {
 /* Float the link section to the right */
 .header-right {
   float: right;
-  padding-right: 6%;
+  padding-left: 60vw;
+  position: fixed;
 }
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
@@ -138,15 +132,11 @@ canvas {
 .mouse_move p {
     font-size: 10rem;
     position: absolute;
-    user-select: none;
-    background: linear-gradient(45deg, rgb(25 10 255) 0%, rgb(1 148 255) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .background {
-    padding-left: 25%;
-    padding-right: 25%;
+    padding-left: 20%;
+    padding-right: 20%;
     padding-top: 50vh;
 }
 
