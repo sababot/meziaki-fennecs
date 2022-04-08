@@ -4,102 +4,75 @@ canvas.height = window.innerHeight;
 
 var c = canvas.getContext('2d');
 
+function round(value, step) {
+    step || (step = 1.0);
+    var inv = 1.0 / step;
+    return Math.round(value * inv) / inv;
+}
+
 window.addEventListener('resize', function(){
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-})
+});
 
-window.onscroll = function(e){
-    window.addEventListener('wheel', function(e){
-        for (var i = 0; i < backgroundArray.length; i++){
-            backgroundArray[i].dx = -1 * e.deltaY * 0.5;
-        }
-    })
-}
+window.addEventListener('scroll', (event) => {
+    back.alpha = round(this.scrollY * (1 / (window.innerHeight / 2)), 0.05);
+    back.size = round(this.scrollY * (1 / (window.innerHeight / 2)), 0.05);
+});
 
-var length = 3;
-var count = 20;
-
-function background(speed, source){
-
-    this.x = 0;
-    this.y = 0;
-    this.dx = 0;
-    this.dy = 0;
-
-    this.target_x;
-
+function background(source){
     this.source = source;
-
-    this.width1 = 0;
-    this.width2 = 0;
-
-    this.speed = speed;
+    var x = 0;
+    var y = 0;
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    this.size = 0;
+    this.alpha = 0;
 
     this.draw = function(){
-        this.width = window.innerWidth;
-
-        for (var i = 0; i < length * this.speed; i++){
-            var img = new Image();
-            img.src = this.source;
-            c.drawImage(img, this.x + (i * this.width), this.y, window.innerWidth, window.innerHeight);
-        }
-    }
-
-    this.update = function(){
-        this.x += this.dx * this.speed;
-
-        if (this.x > 0){
-            this.x = 0;
+        // Alpha
+        if (this.alpha < 0){
+            this.alpha = 0;
         }
 
-        if (this.x < -1 * (this.width * length * this.speed) + (this.width * this.speed)){
-            this.x = -1 * (this.width * length * this.speed) + (this.width * this.speed);
+        else if (this.alpha > 1){
+            this.alpha = 1;
         }
 
-        this.draw();
-    }
-}
+        // Size
+        if (this.size < 0){
+            this.size = 0;
+        }
 
-function nft_meteorites(source){
-    this.x = Math.floor(Math.random() * canvas.width);
-    this.y = 0;
-    this.dx = -5;
-    this.dy = (Math.random() * 15) + 5;
+        else if (this.size > 1){
+            this.size = 1;
+        }
 
-    this.source = source;
+        x = -1 * this.size * 150;
+        y = -1 * this.size * 150;
+        width = (this.size * 300) + window.innerWidth;
+        height = (this.size * 160) + window.innerHeight;
 
-    this.draw = function(){
+        // Image Rendering
+        c.globalAlpha = 1;
         var img = new Image();
         img.src = this.source;
-        c.drawImage(img, this.x, this.y, (window.innerWidth / 100) * 5, (window.innerWidth / 100) * 5);
-    }
+        c.drawImage(img, x, y, width, height);
 
-    this.update = function(){
-        this.x += this.dx;
-        this.y += this.dy;
-
-        this.draw();
+        c.globalAlpha = this.alpha;
+        c.rect(0, 0, window.innerWidth, window.innerHeight);
+        c.fillStyle = "#bc5a03";
+        c.fill();
     }
 }
 
-var backgroundArray = [];
-
-backgroundArray.push(new background(1, "images/background1.png"));
-backgroundArray.push(new background(3, "images/background3.png"));
-backgroundArray.push(new background(5, "images/background2.png"));
+var back = new background("images/desert_background_gif.gif")
 
 function animate(){
     requestAnimationFrame(animate);
     c.clearRect(0, 0, innerWidth, innerHeight);
 
-    for (var i = 0; i < backgroundArray.length; i++){
-        backgroundArray[i].update();
-    }
-
-    for (var i = 0; i < backgroundArray.length; i++){
-        backgroundArray[i].dx = 0;
-    }
+    back.draw();
 }
 
 animate();

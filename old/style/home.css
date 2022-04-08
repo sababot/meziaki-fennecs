@@ -38,7 +38,7 @@ canvas {
 }
 
 .header {
-  background-color: transparent;
+  background-color: #d8d1a0;
   padding: 1.5vw 1vh;
   position: fixed;
   width: 100%;
@@ -141,13 +141,13 @@ canvas {
 }
 
 .sub_heading {
-    color: #d6bb11;
+    color: #E76F51;
     font-size: 3vw;
     padding-bottom: 1vh;
 }
 
 .body {
-    color: black;
+    color: white;
     font-size: 1.25vw;
     text-shadow: none;
 }
