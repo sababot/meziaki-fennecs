@@ -241,27 +241,16 @@ canvas {
     grid-gap: 2.5vw;
     background-color: transparent;
     color: #444;
-    grid-template-rows: repeat(4, 7.5vw);
+    grid-template-rows: repeat(5, 7.5vw);
     grid-template-columns: repeat(1, 67.5vw);
 }
 
 .roadmap-sections a {
     text-decoration: none;
-    background-color: transparent;
+    background-color: #ef6413;
     color: #fff;
-    padding: 0px;
-    font-size: 1.25vw;
-    border: solid;
-    border-color: #f2a02e;
-    border-width: 0.25vw;
-}
-
-.roadmap-sections a:hover {
-    text-decoration: none;
-    background-color: rgba(231, 190, 110, 0.5);
-    color: #fff;
-    padding: 0px;
-    font-size: 1.25vw;
+    padding-top: 0.75vw;
+    font-size: 2vw;
     border: solid;
     border-color: #f2a02e;
     border-width: 0.25vw;
@@ -272,6 +261,44 @@ canvas {
     width: 100%;
     padding-top: 1.25vw;
     color: #f2a02e;
+    font-size: 100%;
+    -webkit-transition: font-size 0ms linear;
+    -ms-transition: font-size 0ms linear;
+    transition: font-size 0ms linear;
+}
+
+.roadmap-sections .box {
+    display: flex;
+}
+
+.team-sections {
+    justify-content: center;
+    padding-top: 2.5vw;
+    padding-bottom: 2.5vw;
+    display: grid;
+    grid-gap: 2.5vw;
+    background-color: transparent;
+    color: #444;
+    grid-template-rows: repeat(2, 17.5vw);
+    grid-template-columns: repeat(2, 32.5vw);
+}
+
+.team-sections a {
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    padding-top: 0.75vw;
+    font-size: 2vw;
+    border: solid;
+    border-color: #f2a02e;
+    border-width: 0.25vw;
+}
+
+.team-sections .box p {
+    text-align: center;
+    width: 100%;
+    padding-top: 1vw;
+    color: black;
     font-size: 100%;
     -webkit-transition: font-size 0ms linear;
     -ms-transition: font-size 0ms linear;
