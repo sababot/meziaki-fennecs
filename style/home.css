@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color: #d8d0a9;
+    background-color: #ef7917;
     overflow-x: hidden;
 }
 
@@ -135,19 +135,153 @@ canvas {
 }
 
 .background {
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-top: 50vh;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 25vh;
+}
+
+.background-tile {
+    background-color: rgba(224, 138, 47, 0.58);
+    box-shadow: 0.75vw 0.75vw rgba(231, 190, 110, 0.5);
+    border: solid;
+    border-width: 0.25vw;
+    border-color:  #eaac72;
+}
+
+.background-tile button {
+    text-decoration: none;
+    background-color: black;
+    margin: 1vw 0vw 1vw 1vw;
+    padding: 0.25vw 3.75vw 0.25vw 3.75vw;
+    font-size: 2vw;
+    color: white;
+    border: solid;
+    border-color: transparent;
+    border-width: 0.25vw;
+}
+
+.background-tile button:hover {
+    text-decoration: none;
+    background-color: black;
+    margin: 1vw 0vw 1vw 1vw;
+    padding: 0.25vw 3.75vw 0.25vw 3.75vw;
+    font-size: 2vw;
+    color:  white;
+    border: solid;
+    border-color: #f2a02e;
+    border-width: 0.25vw;
 }
 
 .sub_heading {
-    color: #d6bb11;
+    color: rgba(231, 190, 110, 0.5);
     font-size: 3vw;
-    padding-bottom: 1vh;
+    padding: 1vw;
+    padding-bottom: 0.5vw;
 }
 
 .body {
     color: black;
     font-size: 1.25vw;
     text-shadow: none;
+    padding: 1vw;
+    padding-top: 0.5vw;
+    line-height: 2vw;
+}
+
+.wrapper-sections {
+    justify-content: center;
+    padding-top: 2.5vw;
+    padding-bottom: 2.5vw;
+    display: grid;
+    grid-gap: 0.1vw;
+    background-color: transparent;
+    color: #444;
+    grid-template-rows: repeat(1, 5vw);
+    grid-template-columns: repeat(4, 10vw);
+}
+
+.wrapper-sections a {
+    text-decoration: none;
+    background-color: transparent;
+    color: #fff;
+    padding: 0px;
+    font-size: 1.25vw;
+    border: solid;
+    border-color: #f2a02e;
+    border-width: 0.25vw;
+}
+
+.wrapper-sections a:hover {
+    text-decoration: none;
+    background-color: rgba(231, 190, 110, 0.5);
+    color: #fff;
+    padding: 0px;
+    font-size: 1.25vw;
+    border: solid;
+    border-color: #f2a02e;
+    border-width: 0.25vw;
+}
+
+.wrapper-sections .box p {
+    text-align: center;
+    width: 100%;
+    padding-top: 1.25vw;
+    color: #f2a02e;
+    font-size: 100%;
+    -webkit-transition: font-size 0ms linear;
+    -ms-transition: font-size 0ms linear;
+    transition: font-size 0ms linear;
+}
+
+.roadmap-sections {
+    justify-content: center;
+    padding-top: 2.5vw;
+    padding-bottom: 2.5vw;
+    display: grid;
+    grid-gap: 2.5vw;
+    background-color: transparent;
+    color: #444;
+    grid-template-rows: repeat(4, 7.5vw);
+    grid-template-columns: repeat(1, 67.5vw);
+}
+
+.roadmap-sections a {
+    text-decoration: none;
+    background-color: transparent;
+    color: #fff;
+    padding: 0px;
+    font-size: 1.25vw;
+    border: solid;
+    border-color: #f2a02e;
+    border-width: 0.25vw;
+}
+
+.roadmap-sections a:hover {
+    text-decoration: none;
+    background-color: rgba(231, 190, 110, 0.5);
+    color: #fff;
+    padding: 0px;
+    font-size: 1.25vw;
+    border: solid;
+    border-color: #f2a02e;
+    border-width: 0.25vw;
+}
+
+.roadmap-sections .box p {
+    text-align: center;
+    width: 100%;
+    padding-top: 1.25vw;
+    color: #f2a02e;
+    font-size: 100%;
+    -webkit-transition: font-size 0ms linear;
+    -ms-transition: font-size 0ms linear;
+    transition: font-size 0ms linear;
+}
+
+.intro-div {
+    background-color: white;
+}
+
+.footer {
+    background-color: rgba(231, 190, 110, 0.5);
 }

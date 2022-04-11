@@ -16,16 +16,17 @@ window.addEventListener('resize', function(){
 });
 
 window.addEventListener('scroll', (event) => {
-    back.alpha = round(this.scrollY * (1 / (window.innerHeight / 2)), 0.05);
-    back.size = round(this.scrollY * (1 / (window.innerHeight / 2)), 0.05);
+    back.alpha = round(this.scrollY * (1 / (window.innerHeight)), 0.05);
+    back.size = round(this.scrollY * (1 / (window.innerHeight)), 0.05);
 });
 
 function background(source){
     this.source = source;
     var x = 0;
     var y = 0;
-    var width = window.innerWidth;
+    var width = (window.innerHeight * 2.086);
     var height = window.innerHeight;
+    var booster = window.innerWidth / (window.innerWidth / 500);
     this.size = 0;
     this.alpha = 0;
 
@@ -48,29 +49,25 @@ function background(source){
             this.size = 1;
         }
 
-        x = -1 * this.size * 150;
-        y = -1 * this.size * 150;
-        width = (this.size * 300) + window.innerWidth;
-        height = (this.size * 160) + window.innerHeight;
+        x = -1 * this.size * (booster / 2);
+        y = -1 * this.size * (booster / 2);
+        width = (this.size * booster) + (window.innerHeight * 2.086);
+        height = (this.size * (booster / 2)) + window.innerHeight;
 
         // Image Rendering
-        c.globalAlpha = 1;
+        c.globalAlpha = 1 - this.alpha;
         var img = new Image();
         img.src = this.source;
         c.drawImage(img, x, y, width, height);
-
-        c.globalAlpha = this.alpha;
-        c.rect(0, 0, window.innerWidth, window.innerHeight);
-        c.fillStyle = "#bc5a03";
-        c.fill();
     }
 }
 
-var back = new background("images/desert_background_gif.gif")
+var back = new background("images/desert_background_front.png")
 
 function animate(){
     requestAnimationFrame(animate);
     c.clearRect(0, 0, innerWidth, innerHeight);
+    c.imageSmoothingEnabled = false;
 
     back.draw();
 }
