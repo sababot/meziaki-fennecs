@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Meziaki Fennecs</title>
+	<link rel="stylesheet" type="text/css" href="style/home.css">
+	<link rel="stylesheet" type="text/css" href="style/explore.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+	<link rel="icon" href="images/logo.png" type="image/x-icon">
+</head>
+<body>
+	<!--Background-->
+	<canvas id="canvas"></canvas>
+
+	<!--Body-->
+	<div>
+		<!--intro-->
+		<div class="panel intro">
+			<div style="display: flex">
+				<img src="images/text_logo.png" class="logo" style="padding-right: 30vw; padding-top: 0vw; width: 25vw;">
+				<div class="wrapper-sections">
+			  		<a href="">
+			  			<div class="box">
+			  				<p class="box-title">Roadmap</p>
+			  			</div>
+			  		</a>
+			  		<a href="">
+			  			<div class="box">
+			  				<p class="box-title">Explore</p>
+			  			</div>
+			  		</a>
+			  		<a href="">
+			  			<div class="box">
+			  				<p class="box-title">Team</p>
+			  			</div>
+			  		</a>
+			  		<a href="vis.html">
+			  			<div class="box">
+			  				<p class="box-title">Visualizer</p>
+			  			</div>
+			  		</a>
+				</div>
+			</div>
+		</div>
+
+		<!--story-->
+		<div class="panel story">
+			<div class="explore-sections">
+			  		<a href="">
+			  			<div class="box">
+			  				<img src="images/nft1.png" style="width: 18vw; padding: 1vw">
+			  				<p class="nft-title">#0001</p>
+			  			</div>
+			  		</a>
+			  		<a href="explore.html">
+			  			<div class="box">
+			  				<img src="images/meziaki_fennec4.png" style="width: 18vw; padding: 1vw">
+			  				<p class="nft-title">#0002</p>
+			  			</div>
+			  		</a>
+			  		<a href="">
+			  			<div class="box">
+			  				<img src="images/meziaki_fennec2.png" style="width: 18vw; padding: 1vw">
+			  				<p class="nft-title">#0003</p>
+			  			</div>
+			  		</a>
+			  		<a href="vis.html">
+			  			<div class="box">
+			  				<img src="images/meziaki_fennec3.png" style="width: 18vw; padding: 1vw">
+			  				<p class="nft-title">#0004</p>
+			  			</div>
+			  		</a>
+				</div>
+		</div>
+
+		<div class="panel decoy">
+			<div id="background" class="background">
+				<!--Spacing-->
+			</div>
+		</div>
+
+		<div class="panel footer" style="background-color: transparent;">
+			<div id="background" class="background" style="padding-left: 0%; padding-right: 0%;">
+				<div class="footer">
+					<p class="body" id="story_body" style="text-align: center; padding: 0.75vw">© Meziaki Fennecs 2022</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Scripts-->
+	<script src="scripts/parallax.js"></script>
+</body>
+</html>

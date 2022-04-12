@@ -1,0 +1,43 @@
+.explore-sections {
+    justify-content: center;
+    padding-top: 2.5vw;
+    padding-bottom: 2.5vw;
+    display: grid;
+    grid-gap: 2.5vw;
+    background-color: transparent;
+    color: #444;
+    grid-template-rows: repeat(4, 20.5vw);
+    grid-template-columns: repeat(4, 20.5vw);
+}
+
+.explore-sections a {
+    text-decoration: none;
+    background-color: transparent;
+    color: #fff;
+    padding: 0px;
+    font-size: 1.25vw;
+    border: solid;
+    border-color: #f2a02e;
+    border-width: 0.25vw;
+}
+
+.explore-sections a:hover {
+    text-decoration: none;
+    background-color: transparent;
+    color: #fff;
+    padding: 0px;
+    font-size: 1.25vw;
+    border: solid;
+    border-color: #f2a02e;
+    border-width: 0.25vw;
+}
+
+.explore-sections .box p {
+    text-align: center;
+    width: 100%;
+    color: #f2a02e;
+    font-size: 2vw;
+    -webkit-transition: font-size 0ms linear;
+    -ms-transition: font-size 0ms linear;
+    transition: font-size 0ms linear;
+}
