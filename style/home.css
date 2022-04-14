@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'LowRes';
+    transition: opacity 0.05s linear, height 0.05s linear, transform 0.05s linear;
 }
 
 @font-face {
@@ -213,7 +214,7 @@ canvas {
 
 .wrapper-sections a:hover {
     text-decoration: none;
-    background-color: rgba(231, 190, 110, 0.5);
+    background-color: rgba(231, 190, 110, 0.5);;
     color: #fff;
     padding: 0px;
     font-size: 1.25vw;
@@ -231,6 +232,17 @@ canvas {
     -webkit-transition: font-size 0ms linear;
     -ms-transition: font-size 0ms linear;
     transition: font-size 0ms linear;
+}
+
+.wrapper-sections .active{
+    text-decoration: none;
+    background-color: rgba(255, 209, 123, 0.75);
+    color: #fff;
+    padding: 0px;
+    font-size: 1.25vw;
+    border: solid;
+    border-color: #f2a02e;
+    border-width: 0.25vw;
 }
 
 .roadmap-sections {
@@ -311,4 +323,20 @@ canvas {
 
 .footer {
     background-color: rgba(231, 190, 110, 0.5);
+}
+
+.back-img-div {
+    position: fixed;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-image {
+    transform: translate(0%, -0%);
+    height: 100%;
+    opacity: 1;
 }

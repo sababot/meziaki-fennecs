@@ -17,30 +17,32 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 	<link rel="icon" href="images/logo.png" type="image/x-icon">
 </head>
-<body>
+<body id="bod">
 	<!--Background-->
-	<canvas id="canvas"></canvas>
 
 	<!--Body-->
 	<div>
 		<!--intro-->
 		<div class="panel intro">
 			<div style="display: flex">
+				<div class="back-img-div">
+					<img src="images/desert_background_front.png" class="background-image" id="back_img">
+				</div>
 				<img src="images/text_logo.png" class="logo" style="padding-right: 30vw; padding-top: 0vw; width: 25vw;">
 				<div class="wrapper-sections">
 			  		<a href="index.html">
 			  			<div class="box">
-			  				<p class="box-title">Home</p>
+			  				<p class="box-title" class="active">Home</p>
 			  			</div>
 			  		</a>
-			  		<a href="">
+			  		<a href="" class="active">
 			  			<div class="box">
 			  				<p class="box-title">Explore</p>
 			  			</div>
 			  		</a>
 			  		<a href="">
 			  			<div class="box">
-			  				<p class="box-title">Team</p>
+			  				<p class="box-title">Shop</p>
 			  			</div>
 			  		</a>
 			  		<a href="vis.html">
@@ -181,6 +183,6 @@
 	</div>
 
 	<!--Scripts-->
-	<script src="scripts/parallax.js"></script>
+	<script src="scripts/background.js"></script>
 </body>
 </html>

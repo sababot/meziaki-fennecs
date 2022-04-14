@@ -14,23 +14,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+	<link rel="icon" href="images/logo.png" type="image/x-icon">
 </head>
-<body>
+<body style="background-color: #f9cfa2">
 	<!--Background-->
 	<canvas id="canvas"></canvas>
 
 	<!--Body-->
-	<div id="header-element" class="header">
-		<!--logo-->
-		<img src="images/logo.png" class="logo" style="padding-left: 6%; width: 10vw; position: fixed">
-			  	
-		<!--sections-->
-		<div class="header-right">
-			<a href="index.html">Home</a>
-			<a href="fennecs.html">Explore</a>
-			<a href="fennecs.html">Store</a>
-			<a href="roadmap.html">Team</a>
-			<a class="active" href="">Visualizer</a>
+	<div style="display: flex">
+		<img src="images/text_logo.png" class="logo" style="padding-right: 30vw; padding-top: 0vw; width: 25vw;">
+		<div class="wrapper-sections">
+			<a href="index.html">
+			  	<div class="box">
+			  		<p class="box-title" class="active">Home</p>
+			  	</div>
+			</a>
+			<a href="explore.html">
+			  	<div class="box">
+			  		<p class="box-title">Explore</p>
+			  	</div>
+			 </a>
+			 <a href="">
+			  	<div class="box">
+			  		<p class="box-title">Shop</p>
+			    </div>
+			</a>
+			<a href="" class="active">
+			  	<div class="box">
+			  		<p class="box-title">Visualizer</p>
+			  	</div>
+			</a>
 		</div>
 	</div>
 

@@ -1,9 +1,9 @@
 * {
-    transition: all 0.35s linear;
+    transition: color 0.35s linear, filter 0.35s linear, opacity 0.05s linear, height 0.05s linear, transform 0.05s linear;
 }
 
 .search-container {
-    transform: translate(26.5%);
+    transform: translate(28.75%);
 }
 
 .search-container input[type=text] {
@@ -16,6 +16,7 @@
     text-decoration: none;
     width: 40%;
     float: left;
+    outline: none;
 }
 
 .search-container img {

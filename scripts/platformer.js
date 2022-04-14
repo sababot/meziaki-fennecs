@@ -63,7 +63,7 @@ function Player(x, y, infected){
     this.draw = function(){
         // Graphics
         var img = new Image();
-        img.src = 'images/meziaki_fennec1.png';
+        img.src = 'images/logo.png';
         c.drawImage(img, this.x, this.y, 40, 40)
 
         // Movement
@@ -173,7 +173,7 @@ function animate(){
 
     c.beginPath();
     c.rect(0, window.innerHeight - 300, window.innerWidth - 1, 300);
-    c.fillStyle = "#E9C46A";
+    c.fillStyle = "#f9af40";
     c.fill();
 
     playerVariable.draw();
