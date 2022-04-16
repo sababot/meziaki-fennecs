@@ -1,26 +1,42 @@
-var controller = new ScrollMagic.Controller();
+$(function () { // wait for document ready
+		var flightpath1 = {
+			leave : {
+				curviness: 1.25,
+				autoRotate: true,
+				values: [
+						{x: 0,	y: 0},
+						{x: "1000vw",	y: "-100vh"},
+					]
+			}
+		};
 
-var wipeAnimation = new TimelineMax()
-	// animate to second panel
-	.to("#slideContainer", 0.5, {z: -150})		// move back in 3D space
-	.to("#slideContainer", 1,   {x: "-25%"})	// move in to first panel
-	.to("#slideContainer", 0.5, {z: 0})				// move back to origin in 3D space
-	// animate to third panel
-	.to("#slideContainer", 0.5, {z: -150, delay: 1})
-	.to("#slideContainer", 1,   {x: "-50%"})
-	.to("#slideContainer", 0.5, {z: 0})
-	// animate to forth panel
-	.to("#slideContainer", 0.5, {z: -150, delay: 1})
-	.to("#slideContainer", 1,   {x: "-75%"})
-	.to("#slideContainer", 0.5, {z: 0})
-	// animate to fith panel
-	.to("#slideContainer", 0.5, {z: -150, delay: 1})
-	.to("#slideContainer", 1,   {x: "-100%"})
-	.to("#slideContainer", 0.5, {z: 0});
+		var flightpath2 = {
+			leave : {
+				curviness: 1.25,
+				autoRotate: true,
+				values: [
+						{x: 0,	y: "100vh"},
+						{x: "1000vw",	y: "200vh"},
+					]
+			}
+		};
 
-new ScrollMagic.Scene({
-		duration: "500%"
-	})
-	.setPin("#pinContainer")
-	.setTween(wipeAnimation)
-	.addTo(controller);
+		// init controller
+		var controller = new ScrollMagic.Controller();
+
+		// create tween
+		var tween1 = new TimelineMax()
+			.add(TweenMax.to($("#bird1"), 1, {css:{bezier:flightpath1.leave}, ease:Power1.easeInOut}));
+
+		var tween2 = new TimelineMax()
+			.add(TweenMax.to($("#bird2"), 1, {css:{bezier:flightpath2.leave}, ease:Power1.easeInOut}));
+
+		// build scene
+		var scene1 = new ScrollMagic.Scene({triggerElement: "#roadmap", duration: $(window).height() / 1})
+						.setTween(tween1)
+						.addTo(controller);
+
+		var scene2 = new ScrollMagic.Scene({triggerElement: "#roadmap", duration: $(window).height() / 1})
+						.setTween(tween2)
+						.addTo(controller);
+})

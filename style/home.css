@@ -253,7 +253,7 @@ canvas {
     grid-gap: 2.5vw;
     background-color: transparent;
     color: #444;
-    grid-template-rows: repeat(5, 7.5vw);
+    grid-template-rows: repeat(6, 7.5vw);
     grid-template-columns: repeat(1, 67.5vw);
 }
 
@@ -338,5 +338,9 @@ canvas {
 .background-image {
     transform: translate(0%, -0%);
     height: 100%;
+    opacity: 1;
+}
+
+.visible {
     opacity: 1;
 }
