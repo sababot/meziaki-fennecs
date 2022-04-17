@@ -1,0 +1,107 @@
+* {
+    transition: color 0.35s linear, filter 0.35s linear, opacity 0.05s linear, height 0.05s linear, transform 0.05s linear;
+}
+
+.search-container {
+    transform: translate(28.75%);
+}
+
+.search-container input[type=text] {
+    height: 2.1vw;
+    font-size: 1.75vw;
+    background-color: rgba(231, 190, 110, 0.75);;
+    border: solid;
+    border-width: 0.25vw;
+    border-color: #f2a02e;
+    text-decoration: none;
+    width: 40%;
+    float: left;
+    outline: none;
+}
+
+.search-container img {
+    width: 2vw;
+    font-size: 1.75vw;
+    background-color: rgba(231, 190, 110, 0.75);;
+    border: solid;
+    border-left: none;
+    border-width: 0.25vw;
+    border-color: #f2a02e;
+    text-decoration: none;
+    float: left;
+}
+
+.search-container img:hover {
+    width: 2vw;
+    font-size: 1.75vw;
+    background-color: rgba(250, 200, 125, 1);;
+    border: solid;
+    border-left: none;
+    border-width: 0.25vw;
+    border-color: #f2a02e;
+    text-decoration: none;
+    float: left;
+}
+
+.explore-sections {
+    clear: both;
+    transition: all 0.25s;
+    justify-content: center;
+    padding-top: 2.5vw;
+    padding-bottom: 2.5vw;
+    display: grid;
+    grid-gap: 2.5vw;
+    background-color: transparent;
+    color: #444;
+    grid-template-rows: repeat(4, 20.5vw);
+    grid-template-columns: repeat(4, 20.5vw);
+}
+
+.explore-sections a {
+    position: relative;
+    text-decoration: none;
+    background-color: transparent;
+    color: #fff;
+    padding: 0px;
+    font-size: 1.25vw;
+    border: solid;
+    border-color: #f2a02e;
+    border-width: 0.25vw;
+}
+
+.explore-sections a:hover {
+    position: relative;
+    text-decoration: none;
+    background-color: transparent;
+    color: #fff;
+    padding: 0px;
+    font-size: 1.25vw;
+    border: solid;
+    border-color: #f2a02e;
+    border-width: 0.25vw;
+}
+
+.nft-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    color: transparent;
+    font-size: 2vw;
+}
+
+.explore-sections .box img {
+    width: 20vw;
+}
+
+.explore-sections .box img:hover {
+    width: 20vw;
+    filter: blur(0.15vw);
+    -webkit-filter: blur(0.15vw);
+}
+
+.explore-sections .box img:hover + .nft-title{
+    color: #f2a02e;
+}

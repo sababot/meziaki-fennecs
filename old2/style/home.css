@@ -11,7 +11,7 @@
 }
 
 body {
-    background-color: #ed7d4e;
+    background-color: #ef7917;
     overflow-x: hidden;
 }
 
@@ -190,8 +190,6 @@ canvas {
 }
 
 .wrapper-sections {
-    padding-left: 55vw;
-    position: fixed;
     justify-content: center;
     padding-top: 2.5vw;
     padding-bottom: 2.5vw;
@@ -201,7 +199,6 @@ canvas {
     color: #444;
     grid-template-rows: repeat(1, 5vw);
     grid-template-columns: repeat(4, 10vw);
-    z-index: 10;
 }
 
 .wrapper-sections a {
@@ -330,6 +327,7 @@ canvas {
 
 .back-img-div {
     position: fixed;
+    z-index: -1;
     width: 100vw;
     height: 100vh;
     display: flex;
