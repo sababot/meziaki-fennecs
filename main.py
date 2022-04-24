@@ -14,6 +14,3 @@ def explore():
 @app.route('/visualize')
 def visualize():
     return render_template('vis.html')
-
-if __name__ == '__main__':
-    app.run()
