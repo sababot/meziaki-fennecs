@@ -8,9 +8,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.velocity.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.velocity.min.js"></script>
 
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://kit.fontawesome.com/497ef235da.js" crossorigin="anonymous"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -117,7 +117,11 @@
 
 					<div class="back-img-div" style="z-index: -1;">
 						<!--<img src="images/sun.png" id="sun" style="width: 15vw; transform: translate(0vw, -65vh);">-->
-						<div id="sun" style="width: 15vw; height: 15vw; transform: translate(0vw, -65vh); background-color: #e5a020; border-radius: 100%"></div>
+						<div id="sun" style="width: 25vh; height: 25vh; transform: translate(0vw, -65vh); background-color: #e5a020; border-radius: 100%"></div>
+					</div>
+
+					<div class="back-img-div" style="z-index: 3;">
+						<img src="../static/images/main-fennec.png" class="background-image" id="main_fennec">
 					</div>
 
 					<div class="back-img-div" style="z-index: -1;">
@@ -125,7 +129,14 @@
 						<img src="https://i.ibb.co/TWfhqRG/fstar.png" id="shooting-star" style="width: 15vw; transform: translate(100vw, 10vh) rotate(32deg);">
 					</div>
 
-					<button style="z-index: 4;" id="intro_text">MINT NOW</button>
+					<div class="background" id="intro_text" style="z-index: 4; padding-right: 10%; padding-left: 45%; transform: translate(0vw, -5vh);">
+						<div class="background-tile">
+							<p class="body" id="story_body" style="font-size: 1.35vw">We are a collection of 1809 fearless fennecs launching on the almighty Solana blockchain- depicting the struggle to survive in the most arid desert in the world. Now a more harmonious time- many fennecs have been spotted. Many see this as a sign; a sign showing the long-awaited resurgence of life in the great Sahara sand sea.</p>
+							<p class="body" id="story_body" style="font-size: 1.35vw">Meziaki Fennecs are an exclusive collection of 1,809 Fennec NFTs on the Solana Blockchain, backed by a top team of NFT collectors, designers, community builders, artists and developers.</p>
+						</div>
+					</div>
+
+					<img src="../static/images/arrow.png" class="scroll-down" id="scroll_down">
 
 					<!--Content-->
 					<div id="story" class="background" style="opacity: 0">
@@ -187,8 +198,8 @@
 						</div>
 					</div>
 				</div>
-				<img src="../static/images/text_logo.png" class="logo" style="padding-right: 30vw; padding-top: 0vw; width: 25vw; position: fixed;">
-				<div class="wrapper-sections">
+				<img src="../static/images/text_logo.png" class="logo" id="text_logo" style="padding-right: 30vw; padding-top: 0vw; width: 25vw; position: fixed;">
+				<div class="wrapper-sections" id="header_elements">
 			  		<a href="" class="active">
 			  			<div class="box">
 			  				<p class="box-title" class="active">Home</p>
@@ -210,30 +221,38 @@
 			  			</div>
 			  		</a>
 				</div>
+
+				<nav class="social">
+          			<ul>
+              			<li><a href="https://twitter.com/MeziakiFennecs">Twitter <i class="fa-brands fa-twitter"></i></a></li>
+            			<li><a href="https://discord.com/invite/GvukxNv">Discord <i class="fa-brands fa-discord"></i></a></li>
+            			<li><a href="https://www.instagram.com/meziakifennecs">Instagram <i class="fa-brands fa-instagram"></i></a></li>
+              		</ul>
+      			</nav>
 		</div>
 
 			<div style="padding-bottom: 50vh;"></div>
-			<div style="padding-bottom: 0vw;" id="target1"></div>
-			<div style="padding-bottom: 10vw;" id="target2"></div>
-			<div style="padding-bottom: 0vw;" id="target3"></div>
-			<div style="padding-bottom: 10vw;" id="target4"></div>
-			<div style="padding-bottom: 10;" id="target5"></div>
-			<div style="padding-bottom: 10vw;" id="target6"></div>
-			<div style="padding-bottom: 20vw;" id="target7"></div>
-			<div style="padding-bottom: 50vw;" id="target8"></div>
-			<div style="padding-bottom: 10vw;" id="target9"></div>
-			<div style="padding-bottom: 10vw;" id="target10"></div>
-			<div style="padding-bottom: 10vw;" id="target11"></div>
-			<div style="padding-bottom: 10vw;" id="target12"></div>
-			<div style="padding-bottom: 10vw;" id="target13"></div>
-			<div style="padding-bottom: 100vw;" id="target14"></div>
-			<div style="padding-bottom: 200vw;" id="target14-5"></div>
-			<div style="padding-bottom: 300vw;" id="target15"></div>
-			<div style="padding-bottom: 200vw;" id="target16"></div>
-			<div style="padding-bottom: 200vw;" id="target17"></div>
-			<div style="padding-bottom: 100vw;" id="target18"></div>
-			<div style="padding-bottom: 200vw;" id="target19"></div>
-			<div style="padding-bottom: 500vw;" id="target20"></div>
+			<div style="padding-bottom: 0vh;" id="target1"></div>
+			<div style="padding-bottom: 25vh;" id="target2"></div>
+			<div style="padding-bottom: 0vh;" id="target3"></div>
+			<div style="padding-bottom: 17.8vh;" id="target4"></div>
+			<div style="padding-bottom: 17.8;" id="target5"></div>
+			<div style="padding-bottom: 17.8vh;" id="target6"></div>
+			<div style="padding-bottom: 35.6vh;" id="target7"></div>
+			<div style="padding-bottom: 89vh;" id="target8"></div>
+			<div style="padding-bottom: 17.8vh;" id="target9"></div>
+			<div style="padding-bottom: 17.8vh;" id="target10"></div>
+			<div style="padding-bottom: 17.8vh;" id="target11"></div>
+			<div style="padding-bottom: 17.8vh;" id="target12"></div>
+			<div style="padding-bottom: 17.8vh;" id="target13"></div>
+			<div style="padding-bottom: 178vh;" id="target14"></div>
+			<div style="padding-bottom: 356vh;" id="target14-5"></div>
+			<div style="padding-bottom: 534vh;" id="target15"></div>
+			<div style="padding-bottom: 356vh;" id="target16"></div>
+			<div style="padding-bottom: 356vh;" id="target17"></div>
+			<div style="padding-bottom: 178vh;" id="target18"></div>
+			<div style="padding-bottom: 356vh;" id="target19"></div>
+			<div style="padding-bottom: 356vh;" id="target20"></div>
 		</div>
 	<!--Scripts-->
 	<script src="../static/scripts/scrollmagic.js"></script>

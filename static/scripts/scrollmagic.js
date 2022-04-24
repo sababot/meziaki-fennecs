@@ -1,12 +1,44 @@
 $(function() {
   var controller = new ScrollMagic.Controller();
 
-  // Scroll
+  // Scroll 0
+  var scene = new ScrollMagic.Scene({
+    triggerElement: "#target1",
+    duration: (jQuery(window).height() * 2)
+  })
+  .setTween("#scroll_down", 0.5, {y: jQuery(window).height()})
+  .addTo(controller);
+
+  // Scroll 1
   var scene = new ScrollMagic.Scene({
     triggerElement: "#target1",
     duration: (jQuery(window).height() * 2)
   })
   .setTween("#intro_text", 0.5, {y: jQuery(window).height()})
+  .addTo(controller);
+
+  // Scroll 2
+  var scene = new ScrollMagic.Scene({
+    triggerElement: "#target1",
+    duration: (jQuery(window).height() * 2)
+  })
+  .setTween("#main_fennec", 0.5, {y: jQuery(window).height()})
+  .addTo(controller);
+
+  // Header 1
+  var scene = new ScrollMagic.Scene({
+    triggerElement: "#target1",
+    duration: (jQuery(window).height() * 2)
+  })
+  .setTween("#text_logo", 0.5, {y: -jQuery(window).height()})
+  .addTo(controller);
+
+  // Header 2
+  var scene = new ScrollMagic.Scene({
+    triggerElement: "#target1",
+    duration: (jQuery(window).height() * 2)
+  })
+  .setTween("#header_elements", 0.5, {y: -jQuery(window).height()})
   .addTo(controller);
 
   // Mountain 1
@@ -67,7 +99,7 @@ $(function() {
 
   // Bird 1
   var scene = new ScrollMagic.Scene({
-    triggerElement: "#target2",
+    triggerElement: "#target3",
     duration: (jQuery(window).height() * 4)
   })
   .setTween("#bird1", 0.5, {x: 1000, y: -250})
@@ -83,7 +115,7 @@ $(function() {
 
   // Sun Move
   var scene = new ScrollMagic.Scene({
-    triggerElement: "#target3",
+    triggerElement: "#target4",
     duration: (jQuery(window).height() * 3)
   })
   .setTween("#sun", 0.5, {y: 0})
