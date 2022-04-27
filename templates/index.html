@@ -18,244 +18,71 @@
 	<link rel="icon" href="../static/images/logo.png" type="image/x-icon">
 </head>
 <body id="bod">
-	<!--Background-->
-	<!--<canvas id="canvas"></canvas>-->
+	<canvas id="canvas" style="position: fixed;"></canvas>
 
-	<!--Body-->
-	<div>
-		<!--intro-->
-		<div class="panel intro">
-			<div style="display: flex">
-				<div class="back-img-div">
-					<!--Mountain-->
-					<div class="back-img-div" style="z-index: 0;">
-						<img src="../static/images/MountainsItch/Mountains1_sunset/10_mountains1sunset.png" class="background-image" id="back_img1">
-					</div>
+	<!--HEADER-->
+	<img src="../static/images/text_logo.png" class="logo" id="text_logo" style="padding: 0.5vw 1vw 0.5vw 1vw; margin-left: 0vw; width: 15vw; position: fixed; margin-top: 0vw;">
+	<div class="wrapper-sections" id="header_elements">
+		<a href="" class="active">
+			<div class="box">
+			  	<p class="box-title" class="active">HOME</p>
+			</div>
+		</a>
+		<a href="explore">
+			<div class="box">
+			  	<p class="box-title">EXPLORE</p>
+			</div>
+		</a>
+		<a href="">
+			<div class="box">
+			  	<p class="box-title">SHOP</p>
+			</div>
+		</a>
+		<a href="visualize">
+			<div class="box">
+			  	<p class="box-title">VISUALIZER</p>
+			</div>
+		</a>
+		<a href="">
+			<div class="box">
+			  	<i class="fa-brands fa-twitter"></i>
+			</div>
+		</a>
+		<a href="">
+			<div class="box">
+			  	<i class="fa-brands fa-discord"></i>
+			</div>
+		</a>
+	</div>
 
-					<div class="back-img-div" style="z-index: 1;">
-						<img src="../static/images/MountainsItch/Mountains1_sunset/11_mountains1sunset.png" class="background-image" id="back_img2">
-					</div>
+	<!--BODY-->
+	<div id="container">
+		<span id="text1"></span>
+		<span id="text2"></span>
+	</div>
 
-					<div class="back-img-div" style="z-index: 2;">
-						<img src="../static/images/MountainsItch/Mountains1_sunset/12_mountains1sunset.png" class="background-image" id="back_img3">
-					</div>
+	<svg id="filters" style="height: 10vw;">
+		<defs>
+			<filter id="threshold">
+				<feColorMatrix in="SourceGraphic"
+					type="matrix"
+					values="1 0 0 0 0
+							0 1 0 0 0
+							0 0 1 0 0
+							0 0 0 255 -140" />
+			</filter>
+		</defs>
+	</svg>
 
-					<div class="back-img-div" style="z-index: 3;">
-						<img src="../static/images/MountainsItch/Mountains1_sunset/13_mountains1sunset.png" class="background-image" id="back_img4">
-					</div>
+	<!--DUNE-->
+	<button class="dune-button" id="dune" onmouseover="expand()" onmouseleave="back()">
+		<img src="../static/images/dunesvg.png" class="dune-img">
+	</button>
 
-					<div class="back-img-div" style="z-index: 4;">
-						<img src="../static/images/MountainsItch/Mountains1_sunset/14_mountains1sunset.png" class="background-image" id="back_img5">
-					</div>
+	<p class="copyright">© 2022, Meziaki Fennecs</p>
 
-					<div class="back-img-div" style="z-index: 5;">
-						<img src="../static/images/MountainsItch/Mountains1_sunset/15_mountains1sunset.png" class="background-image" id="back_img6">
-					</div>
-
-					<div class="back-img-div" style="z-index: 6;">
-						<img src="../static/images/MountainsItch/Mountains1_sunset/16_mountains1sunset.png" class="background-image" id="back_img7">
-					</div>
-
-					<!--Clouds-->
-					<div class="back-img-div" style="z-index: 0; transform: translate(100%);">
-						<img src="../static/images/MountainsItch/Mountains1_day/03_mountains1day.png" class="background-image" id="cloud1">
-					</div>
-
-					<div class="back-img-div" style="z-index: 0; transform: translate(-100%)">
-						<img src="../static/images/MountainsItch/Mountains1_day/04_mountains1day.png" class="background-image" id="cloud2">
-					</div>
-
-					<div class="back-img-div" style="z-index: 0; transform: translate(-100%)">
-						<img src="../static/images/MountainsItch/Mountains1_day/05_mountains1day.png" class="background-image" id="cloud3">
-					</div>
-
-					<div class="back-img-div" style="z-index: 0; transform: translate(-100%)">
-						<img src="../static/images/MountainsItch/Mountains1_day/06_mountains1day.png" class="background-image" id="cloud4">
-					</div>
-
-					<div class="back-img-div" style="z-index: 0; transform: translate(100%)">
-						<img src="../static/images/MountainsItch/Mountains1_day/07_mountains1day.png" class="background-image" id="cloud5">
-					</div>
-
-					<div class="back-img-div" style="z-index: 0; transform: translate(100%)">
-						<img src="../static/images/MountainsItch/Mountains1_day/08_mountains1day.png" class="background-image" id="cloud6">
-					</div>
-
-					<!--Stars-->
-					<div class="back-img-div" style="z-index: 0;">
-						<img src="../static/images/sky1.png" class="background-image" id="stars11" style="opacity: 0;">
-					</div>
-
-					<div class="back-img-div" style="z-index: 0;">
-						<img src="../static/images/sky2.png" class="background-image" id="stars12" style="opacity: 0;">
-					</div>
-
-					<div class="back-img-div" style="z-index: 0;">
-						<img src="../static/images/sky3.png" class="background-image" id="stars13" style="opacity: 0;">
-					</div>
-
-					<div class="back-img-div" style="z-index: 0;">
-						<img src="../static/images/sky1.png" class="background-image" id="stars21" style="opacity: 0; transform: translate(0%, -100%)">
-					</div>
-
-					<div class="back-img-div" style="z-index: 0;">
-						<img src="../static/images/sky2.png" class="background-image" id="stars22" style="opacity: 0; transform: translate(0%, -100%)">
-					</div>
-
-					<div class="back-img-div" style="z-index: 0;">
-						<img src="../static/images/sky3.png" class="background-image" id="stars23" style="opacity: 0; transform: translate(0%, -100%)">
-					</div>
-
-					<!--Props-->
-					<div class="back-img-div" style="z-index: 6;">
-						<img src="../static/images/bird.gif" id="bird1" style="width: 6vw; transform: translate(-54vw, 10vh);">
-					</div>
-
-					<div class="back-img-div" style="z-index: 6;">
-						<img src="../static/images/bird.gif" id="bird2" style="width: 6vw; transform: translate(-54vw, 20vh);">
-					</div>
-
-					<div class="back-img-div" style="z-index: -1;">
-						<!--<img src="images/sun.png" id="sun" style="width: 15vw; transform: translate(0vw, -65vh);">-->
-						<div id="sun" style="width: 25vh; height: 25vh; transform: translate(0vw, -65vh); background-color: #e5a020; border-radius: 100%"></div>
-					</div>
-
-					<div class="back-img-div" style="z-index: 3;">
-						<img src="../static/images/main-fennec.png" class="background-image" id="main_fennec">
-					</div>
-
-					<div class="back-img-div" style="z-index: -1;">
-						<!--<img src="images/sun.png" id="sun" style="width: 15vw; transform: translate(0vw, -65vh);">-->
-						<img src="https://i.ibb.co/TWfhqRG/fstar.png" id="shooting-star" style="width: 15vw; transform: translate(100vw, 10vh) rotate(32deg);">
-					</div>
-
-					<div class="background" id="intro_text" style="z-index: 4; padding-right: 10%; padding-left: 45%; transform: translate(0vw, -5vh);">
-						<div class="background-tile">
-							<p class="body" id="story_body" style="font-size: 1.35vw">We are a collection of 1809 fearless fennecs launching on the almighty Solana blockchain- depicting the struggle to survive in the most arid desert in the world. Now a more harmonious time- many fennecs have been spotted. Many see this as a sign; a sign showing the long-awaited resurgence of life in the great Sahara sand sea.</p>
-							<p class="body" id="story_body" style="font-size: 1.35vw">Meziaki Fennecs are an exclusive collection of 1,809 Fennec NFTs on the Solana Blockchain, backed by a top team of NFT collectors, designers, community builders, artists and developers.</p>
-						</div>
-					</div>
-
-					<img src="../static/images/arrow.png" class="scroll-down" id="scroll_down">
-
-					<!--Content-->
-					<div id="story" class="background" style="opacity: 0">
-						<div class="background-tile">
-							<p class="sub_heading" class="mouse_move" id="story_heading">Story</p>
-							<p class="body" id="story_body">Fennecs, or mostly known as the warriors of the Sahara are symbols of the struggle associated with living in the barren dunes littered around the largest desert in the world. What was once a geographic disadvantage, the scorching sun of these desolate lands could now inhabit the bravest of animals.</p>
-							<p class="body" id="story_body1">Fennecs do their due diligence regarding their Eco systematic efficacy and take heavy part in turning mostly barren areas into a conjoined utopia. After the intense 1809 heat waves - the battle agains the sands was unwinnable and the world saw not only a dramatic plummet in fennec population numbers, but also the genocide of almost all desert inhabiting life forms. Now a more harmonious time- many fennecs have been spotted. Many see this as a sign; a sign showing the long-awaited resurgence of life in the great Sahara sand sea.</p>
-						</div>
-					</div>
-
-					<div id="utility" class="background" style="transform: translate(0vw, 100vw);">
-						<div class="background-tile">
-							<p class="sub_heading" class="mouse_move" id="utility_heading">Utility</p>
-							<p class="body" id="story_body">Fennecs will be used as characters in a Meziaki Fennecs Game which will be coming soon. Furthermore, owners will profit from comission. Bla bla bla ...</p>
-						</div>
-					</div>
-
-					<div id="roadmap" class="background" style="transform: translate(0vw, -75vw);">
-						<div class="background-tile">
-							<p class="sub_heading" class="mouse_move" id="story_heading">Roadmap</p>
-							<div class="roadmap-sections">
-						  		<a href="">
-						  			<div class="box">
-						  				<p class="box-title" style="flex: 0.75;">> Stage 1: </p>
-						  				<p class="box-title" style="flex: 2.5; text-align: left">Launch 1805 NFTs in the Solana Blockchain</p>
-						  			</div>
-						  		</a>
-						  		<a href="">
-						  			<div class="box">
-						  				<p class="box-title" style="flex: 0.75;">> Stage 2: </p>
-						  				<p class="box-title" style="flex: 2.5; text-align: left">Legendary Fennecs Auction</p>
-						  			</div>
-						  		</a>
-						  		<a href="">
-						  			<div class="box">
-						  				<p class="box-title" style="flex: 0.75;">> Stage 3: </p>
-						  				<p class="box-title" style="flex: 2.5; text-align: left">Release Mobile Game for Meziaki Fennecs Owners</p>
-						  			</div>
-						  		</a>
-						  		<a href="">
-						  			<div class="box">
-						  				<p class="box-title" style="flex: 0.75;">> Stage 4: </p>
-						  				<p class="box-title" style="flex: 2.5; text-align: left;">Profit from Store gives Extra Rewards to Holders</p>
-						  			</div>
-						  		</a>
-						  		<a href="">
-						  			<div class="box">
-						  				<p class="box-title" style="flex: 0.75;">> Stage 5: </p>
-						  				<p class="box-title" style="flex: 2.5; text-align: left">Staking Token Rewards</p>
-						  			</div>
-						  		</a>
-						  		<a href="">
-						  			<div class="box">
-						  				<p class="box-title" style="flex: 0.75;">> Stage 6: </p>
-						  				<p class="box-title" style="flex: 2.5; text-align: left;">Creation of Future Linking Projects</p>
-						  			</div>
-						  		</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<img src="../static/images/text_logo.png" class="logo" id="text_logo" style="padding-right: 30vw; padding-top: 0vw; width: 25vw; position: fixed;">
-				<div class="wrapper-sections" id="header_elements">
-			  		<a href="" class="active">
-			  			<div class="box">
-			  				<p class="box-title" class="active">Home</p>
-			  			</div>
-			  		</a>
-			  		<a href="explore">
-			  			<div class="box">
-			  				<p class="box-title">Explore</p>
-			  			</div>
-			  		</a>
-			  		<a href="">
-			  			<div class="box">
-			  				<p class="box-title">Shop</p>
-			  			</div>
-			  		</a>
-			  		<a href="visualize">
-			  			<div class="box">
-			  				<p class="box-title">Visualizer</p>
-			  			</div>
-			  		</a>
-				</div>
-
-				<nav class="social">
-          			<ul>
-              			<li><a href="https://twitter.com/MeziakiFennecs">Twitter <i class="fa-brands fa-twitter"></i></a></li>
-            			<li><a href="https://discord.com/invite/GvukxNv">Discord <i class="fa-brands fa-discord"></i></a></li>
-            			<li><a href="https://www.instagram.com/meziakifennecs">Instagram <i class="fa-brands fa-instagram"></i></a></li>
-              		</ul>
-      			</nav>
-		</div>
-
-			<div style="padding-bottom: 50vh;"></div>
-			<div style="padding-bottom: 0vh;" id="target1"></div>
-			<div style="padding-bottom: 25vh;" id="target2"></div>
-			<div style="padding-bottom: 0vh;" id="target3"></div>
-			<div style="padding-bottom: 17.8vh;" id="target4"></div>
-			<div style="padding-bottom: 17.8;" id="target5"></div>
-			<div style="padding-bottom: 17.8vh;" id="target6"></div>
-			<div style="padding-bottom: 35.6vh;" id="target7"></div>
-			<div style="padding-bottom: 89vh;" id="target8"></div>
-			<div style="padding-bottom: 17.8vh;" id="target9"></div>
-			<div style="padding-bottom: 17.8vh;" id="target10"></div>
-			<div style="padding-bottom: 17.8vh;" id="target11"></div>
-			<div style="padding-bottom: 17.8vh;" id="target12"></div>
-			<div style="padding-bottom: 17.8vh;" id="target13"></div>
-			<div style="padding-bottom: 178vh;" id="target14"></div>
-			<div style="padding-bottom: 356vh;" id="target14-5"></div>
-			<div style="padding-bottom: 534vh;" id="target15"></div>
-			<div style="padding-bottom: 356vh;" id="target16"></div>
-			<div style="padding-bottom: 356vh;" id="target17"></div>
-			<div style="padding-bottom: 178vh;" id="target18"></div>
-			<div style="padding-bottom: 356vh;" id="target19"></div>
-			<div style="padding-bottom: 356vh;" id="target20"></div>
-		</div>
-	<!--Scripts-->
-	<script src="../static/scripts/scrollmagic.js"></script>
-	<script src="../static/scripts/compatability.js"></script>
+	<!--SCRIPTS-->
+	<script src="../static/scripts/textmerge.js"></script>
+	<script src="../static/scripts/dune.js"></script>
 </body>
 </html>

@@ -2,16 +2,21 @@
     margin: 0;
     padding: 0;
     font-family: 'LowRes';
-    transition: all 0.25s;
+    transition: background-color 0.5s;
 }
 
 @font-face {
   font-family: "LowRes";
-  src: url('../fonts/minecraft.otf');
+  src: url('../fonts/pixellari.ttf');
+}
+
+@font-face {
+  font-family: "TallBold";
+  src: url('../fonts/tallbolder.ttf');
 }
 
 body {
-    background-color: #ed7d4e;
+    background-color: #FFE2D7;
     overflow-x: hidden;
 }
 
@@ -190,62 +195,59 @@ canvas {
 }
 
 .wrapper-sections {
-    padding-left: 55vw;
+    padding-left: 48vw;
     position: fixed;
     justify-content: center;
-    padding-top: 2.5vw;
+    padding-top: 2vw;
     padding-bottom: 2.5vw;
     display: grid;
-    grid-gap: 0.1vw;
+    grid-gap: 1vw;
     background-color: transparent;
     color: #444;
-    grid-template-rows: repeat(1, 5vw);
-    grid-template-columns: repeat(4, 10vw);
+    grid-template-rows: repeat(1, 2.5vw);
+    grid-template-columns: 9vw 9vw 9vw 9vw 4vw 4vw;
     z-index: 10;
 }
 
 .wrapper-sections a {
     text-decoration: none;
-    background-color: transparent;
+    background-color: #FFD8C9;
     color: #fff;
     padding: 0px;
-    font-size: 1.25vw;
-    border: solid;
-    border-color: #f2a02e;
-    border-width: 0.25vw;
+    font-size: 1.5vw;
+    border-radius: 0.4vw;
 }
 
 .wrapper-sections a:hover {
     text-decoration: none;
-    background-color: rgba(231, 190, 110, 0.5);
+    background-color: #FFF1EC;
     color: #fff;
     padding: 0px;
-    font-size: 1.25vw;
-    border: solid;
-    border-color: #f2a02e;
-    border-width: 0.25vw;
 }
 
 .wrapper-sections .box p {
     text-align: center;
     width: 100%;
-    padding-top: 1.25vw;
-    color: #f2a02e;
+    padding-top: 0.5vw;
+    color: #FFA973;
     font-size: 100%;
     -webkit-transition: font-size 0ms linear;
     -ms-transition: font-size 0ms linear;
     transition: font-size 0ms linear;
 }
 
+.wrapper-sections .box i {
+    text-align: center;
+    padding-top: 0.5vw;
+    padding-left: 1.15vw;
+    color: #FFA973;
+}
+
 .wrapper-sections .active{
     text-decoration: none;
-    background-color: rgba(255, 209, 123, 0.75);
+    background-color: #FFCCB9;
     color: #fff;
     padding: 0px;
-    font-size: 1.25vw;
-    border: solid;
-    border-color: #f2a02e;
-    border-width: 0.25vw;
 }
 
 .roadmap-sections {
@@ -326,6 +328,11 @@ canvas {
 
 .footer {
     background-color: rgba(231, 190, 110, 0.5);
+}
+
+.main-fennec {
+    height: 55vh;
+    width: 55vh;
 }
 
 .back-img-div {
@@ -451,4 +458,82 @@ canvas {
 
 .social a {
     text-decoration: none;
+}
+
+/*Text Merge*/
+#container {
+    /* Center the text in the viewport. */
+    position: fixed;
+    padding-top: 30vh;
+    margin: auto;
+    width: 100vw;
+    top: 0;
+    
+    /* This filter is a lot of the magic, try commenting it out to see how the morphing works! */
+    filter: url(#threshold) blur(0.6px);
+}
+
+/* Your average text styling */
+#text1, #text2 {
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+    /* Image behind Text
+    background-image: url(https://i.pinimg.com/originals/f1/e9/24/f1e924033217d75a1d45f7dd4fbc4423.jpg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    */
+
+    font-family: 'TallBold';
+    font-weight: bolder;
+    
+    font-size: 15vw;
+    letter-spacing: 1vw;
+    transform: scale(1, 1);
+    
+    color: #E9CDC3;
+
+    text-align: center;
+    
+    user-select: none;
+}
+
+.back-nft {
+    /*box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;*/
+    position: fixed;
+    width: 7vw;
+}
+
+/* DUNE */
+.dune-button {
+    position: absolute;
+    margin-top: 65vh;
+    width: 100vw;
+    height: 16.5vh;
+    border: none;
+    outline: none;
+    background-color: #FFA973;
+    transition: all 0.25s;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.dune-img {
+    position: absolute;
+    width: 100vw;
+    z-index: 4;
+    padding-bottom: 0;
+    top: -7.5vh;
+    left: 0;
+}
+
+.copyright {
+    position: absolute;
+    color: #333333;
+    font-size: 2vh;
+    bottom: 1%;
+    left: 1%;
 }
