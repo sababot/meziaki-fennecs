@@ -524,16 +524,32 @@ canvas {
 .dune-img {
     position: absolute;
     width: 100vw;
-    z-index: 4;
+    z-index: 0;
     padding-bottom: 0;
     top: -7.5vh;
     left: 0;
 }
 
 .copyright {
-    position: absolute;
+    position: fixed;
     color: #333333;
     font-size: 2vh;
     bottom: 1%;
     left: 1%;
+}
+
+.expand {
+    z-index: 1;
+    transition: all 0.25s;
+    border: none;
+    background-image: url(../images/arrow.png);
+    opacity: 0;
+    background-size: 100%;
+    background-color: transparent;
+    transform: rotate(-90deg);
+    height: 3vw;
+    width: 3vw;
+    position: absolute;
+    bottom: 0%;
+    left: 47.5vw;
 }
