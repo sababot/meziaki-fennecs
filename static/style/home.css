@@ -195,7 +195,7 @@ canvas {
 }
 
 .wrapper-sections {
-    padding-left: 48vw;
+    padding-left: 35vw;
     position: fixed;
     justify-content: center;
     padding-top: 2vw;
@@ -205,7 +205,7 @@ canvas {
     background-color: transparent;
     color: #444;
     grid-template-rows: repeat(1, 2.5vw);
-    grid-template-columns: 9vw 9vw 9vw 9vw 4vw 4vw;
+    grid-template-columns: 5.5vw 8vw 10vw 8.5vw 5.5vw 10vw 4vw 4vw;
     z-index: 10;
 }
 

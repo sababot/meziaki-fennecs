@@ -3,7 +3,7 @@
 <head>
 	<title>Meziaki Fennecs</title>
 	<link rel="stylesheet" type="text/css" href="../static/style/home.css">
-	<link rel="stylesheet" type="text/css" href="../static/style/explore.css">
+	<link rel="stylesheet" type="text/css" href="../static/style/fennecs.css">
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/TweenMax.min.js"></script>
@@ -23,47 +23,63 @@
 	<!--Body-->
 	<div>
 		<!--intro-->
-		<img src="../static/images/text_logo.png" class="logo" id="text_logo" style="padding: 0.5vw 1vw 0.5vw 1vw; margin-left: 0vw; width: 15vw; position: fixed; margin-top: 0vw;">
+		<img src="../static/images/text_logo.png" class="logo" id="text_logo" style="padding: 0.5vw 1vw 0.5vw 1vw; margin-left: 0vw; width: 15vw; position: fixed; margin-top: 0vw; z-index: 2;">
 		<div class="wrapper-sections" id="header_elements">
-			<a href="/">
-				<div class="box">
-				  	<p class="box-title" class="active">HOME</p>
-				</div>
-			</a>
-			<a href="" class="active">
-				<div class="box">
-				  	<p class="box-title">EXPLORE</p>
-				</div>
-			</a>
-			<a href="">
-				<div class="box">
-				  	<p class="box-title">SHOP</p>
-				</div>
-			</a>
-			<a href="visualize">
-				<div class="box">
-				  	<p class="box-title">VISUALIZER</p>
-				</div>
-			</a>
-			<a href="">
-				<div class="box">
-				  	<i class="fa-brands fa-twitter"></i>
-				</div>
-			</a>
-			<a href="">
-				<div class="box">
-				  	<i class="fa-brands fa-discord"></i>
-				</div>
-			</a>
-		</div>
+		<a href="/">
+			<div class="box">
+			  	<p class="box-title">HOME</p>
+			</div>
+		</a>
+		<a href="" class="active">
+			<div class="box">
+			  	<p class="box-title">FENNECS</p>
+			</div>
+		</a>
+		<a href="desert">
+			<div class="box">
+			  	<p class="box-title">THE DESERT</p>
+			</div>
+		</a>
+		<a href="roadmap">
+			<div class="box">
+			  	<p class="box-title">ROADMAP</p>
+			</div>
+		</a>
+		<a href="team">
+			<div class="box">
+			  	<p class="box-title">TEAM</p>
+			</div>
+		</a>
+		<a href="visualize">
+			<div class="box">
+			  	<p class="box-title">VISUALIZER</p>
+			</div>
+		</a>
+		<a href="https://twitter.com/meziakifennecs">
+			<div class="box">
+			  	<i class="fa-brands fa-twitter"></i>
+			</div>
+		</a>
+		<a href="">
+			<div class="box">
+			  	<i class="fa-brands fa-discord"></i>
+			</div>
+		</a>
+	</div>
 
 		<!--explore-->
-		<div class="panel explore" style="padding-top: 15vw;">
-			<div class="search-container">
-				<input type="text" placeholder="Fennec Name / ID">
-				<img src="../static/images/searchbaricon.png">
+		<div class="panel explore">
+			<div style="padding-top: 10vw; padding-left: 2.5vw; padding-right: 2.5vw; display: flex; position: fixed; width: 95%; z-index: 1; background-color: #FFE2D7">
+				<p class="indicator" style="flex: 1; margin-right: 0vw;">FILTER</p>
+				<div style="flex: 2.5; margin-left: 2vw; margin-right: 1vw;">
+					<p class="indicator">FENNECS</p>
+				</div>
 			</div>
-			<div class="explore-sections">
+			<div style="display: flex; padding: 2.5vw; padding-top: 15.5vw;">
+				<div class="filters" style="flex: 1; position: fixed; z-index: 2;">
+					<input type="text" placeholder="Fennec Name / ID">
+				</div>
+				<div class="explore-sections" style="flex: 2.5;">
 					<!--Row 1-->
 			  		<a href="">
 			  			<div class="box">
@@ -168,19 +184,12 @@
 			  			</div>
 			  		</a>
 				</div>
+			</div>
 		</div>
 
 		<div class="panel decoy">
 			<div id="background" class="background">
 				<!--Spacing-->
-			</div>
-		</div>
-
-		<div class="panel footer" style="background-color: transparent;">
-			<div id="background" class="background" style="padding-left: 0%; padding-right: 0%;">
-				<div class="footer">
-					<p class="body" id="story_body" style="text-align: center; padding: 0.75vw">© Meziaki Fennecs 2022</p>
-				</div>
 			</div>
 		</div>
 	</div>

@@ -7,9 +7,9 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/explore')
-def explore():
-    return render_template('explore.html')
+@app.route('/fennecs')
+def fennecs():
+    return render_template('fennecs.html')
 
 @app.route('/visualize')
 def visualize():

@@ -173,7 +173,7 @@ function animate(){
 
     c.beginPath();
     c.rect(0, window.innerHeight - 300, window.innerWidth - 1, 300);
-    c.fillStyle = "#f9af40";
+    c.fillStyle = "#FFA973";
     c.fill();
 
     playerVariable.draw();
