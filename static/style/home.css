@@ -510,7 +510,7 @@ canvas {
     position: absolute;
     margin-top: 65vh;
     width: 100vw;
-    height: 16.5vh;
+    height: 10vh;
     border: none;
     outline: none;
     background-color: #FFA973;
@@ -526,7 +526,8 @@ canvas {
     width: 100vw;
     z-index: 0;
     padding-bottom: 0;
-    top: -7.5vh;
+    transform: translate(0%, -99%);
+    top: 0;
     left: 0;
 }
 
