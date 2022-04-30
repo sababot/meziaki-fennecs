@@ -1,0 +1,70 @@
+* {
+    transition: background-color 0.5s;
+}
+
+.indicator {
+    font-size: 3vw;
+    color: #F0A373;
+    border-bottom: solid;
+    border-width: 0.25vw;
+    border-color: #E9CDC3;
+}
+
+.project-description {
+    padding: 2vw 6vw 0vw 6vw;
+    font-size: 1.35vw;
+    color: #C6B3AD;
+}
+
+.team-sections {
+    clear: both;
+    transition: all 0.25s;
+    justify-content: center;
+    display: grid;
+    grid-gap: auto;
+    background-color: transparent;
+    color: #444;
+    grid-template-rows: repeat(2, 35vw);
+    grid-template-columns: repeat(4, 20vw);
+}
+
+.team-sections a {
+    position: relative;
+    text-decoration: none;
+    background-color: transparent;
+    color: #fff;
+    padding: 0px;
+    font-size: 1.25vw;
+    border: none;
+    border-radius: 2vw;
+    box-shadow: rgba(51, 51, 51, 0.5) 0 0.3vw 0.5vw;
+}
+
+.team-sections .box .team-text {
+    margin: 0vw 1vw 1vw 1vw;
+}
+
+.team-sections .box img{
+    width: 100%;
+}
+
+.team-sections .box .team-title {
+    color: #F0A373;
+    font-size: 2vw;
+    padding: 0vw 0vw 0.25vw 0vw;
+    text-align: left;
+}
+
+.team-sections .box .role {
+    color: #C6B3AD;
+    font-size: 1.5vw;
+    padding: 0vw 1vw 0vw 0vw;
+    text-align: left;
+}
+
+.team-sections .box .description {
+    color: #c6b3ad;
+    font-size: 1.25vw;
+    padding: 1vw 0vw 0vw 0vw;
+    text-align: left;
+}

@@ -14,3 +14,7 @@ def fennecs():
 @app.route('/visualize')
 def visualize():
     return render_template('vis.html')
+
+@app.route('/desert')
+def desert():
+    return render_template('desert.html')
