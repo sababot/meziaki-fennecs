@@ -1,21 +1,52 @@
-var expanded = false;
+let prev = 2;
+var show = false;
 
-function expand() {
-	if (expanded == false) {
-		document.getElementById('dune').style.marginTop = '10vw';
-		document.getElementById('dune').style.height = '80vh';
+function showall() {
+	show = true;
 
-		document.getElementById('expand_button').style.transform = 'rotate(90deg)';
-
-		expanded = true;
-	}
-
-	else if (expanded == true) {
-		document.getElementById('dune').style.marginTop = '65vh';
-		document.getElementById('dune').style.height = '16.5vh';
-
-		document.getElementById('expand_button').style.transform = 'rotate(-90deg)';
-
-		expanded = false;
+	for (var i = 1; i < 4; i++) {
+		document.getElementById('fennec_' + i).style.transform = "translate(0%, -99%)";
 	}
 }
+
+function hideall() {
+	show = false;
+
+	for (var i = 1; i < 4; i++) {
+		document.getElementById('fennec_' + i).style.transform = "translate(0%, 0%)";
+	}
+}
+
+function fennecs() {
+	if (show == false) {
+		let rand = Math.floor(Math.random() * 4) + 1;
+
+		while (prev == rand) {
+			rand = Math.floor(Math.random() * 4) + 1;
+		}
+
+		if (rand != 4) {
+			for (var i = 1; i < 4; i++) {
+				if (i != rand) {
+					document.getElementById('fennec_' + i).style.transform = "translate(0%, 0%)";
+				}
+
+				else if (i == rand) {
+					document.getElementById('fennec_' + i).style.transform = "translate(0%, -99%)";
+				}
+			}
+		}
+
+		else {
+			for (var i = 1; i < 4; i++) {
+				document.getElementById('fennec_' + i).style.transform = "translate(0%, 0%)";
+			}
+		}
+
+		prev = rand;
+	}
+}
+
+fennecs();
+
+setInterval(fennecs, 5000);

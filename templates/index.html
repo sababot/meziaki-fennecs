@@ -17,7 +17,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 	<link rel="icon" href="../static/images/logo.png" type="image/x-icon">
 </head>
-<body id="bod">
+<body id="bod" style="overflow: hidden;">
 	<!--HEADER-->
 	<img src="../static/images/text_logo.png" class="logo" id="text_logo" style="padding: 0.5vw 1vw 0.5vw 1vw; margin-left: 0vw; width: 15vw; position: fixed; margin-top: 0vw;">
 	<div class="wrapper-sections" id="header_elements">
@@ -78,13 +78,15 @@
 	</svg>
 
 	<!--DUNE-->
-	<button class="dune-button" id="dune">
+	<button class="dune-button" id="dune" onmouseover="showall()" onmouseleave="hideall()">
 		<img src="../static/images/dunesvg_landscape.png" class="dune-img" id="desert-svg">
+		<img src="../static/images/backgroundnft1.png" class="fennec-img" id="fennec_1">
+		<img src="../static/images/backgroundnft2.png" class="fennec-img" id="fennec_2">
+		<img src="../static/images/backgroundnft3.png" class="fennec-img" id="fennec_3">
 	</button>
 
 	<!--FOOTER-->
 	<p class="copyright">© 2022, Meziaki Fennecs</p>
-	<button class="expand" id="expand_button" onclick="expand()"></button>
 
 	<!--SCRIPTS-->
 	<script src="../static/scripts/compatability.js"></script>
