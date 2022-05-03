@@ -4,44 +4,37 @@ var c = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-document.addEventListener('keydown', aim, true);
-document.addEventListener('keyup', aim2, true);
+document.addEventListener('keydown', keysdown, true);
+document.addEventListener('keyup', keysup, true);
 
-// Variables
-let g = 0;
-let f = 1;
-let bulletCount = 0;
-var left = false;
-var right = false;
+// VARIABLES
 var up = false;
-var down = false;
 let jump = 0;
-let jumpBot = 0;
-let bullet_index = 0;
-let bullet_index_bot = 0;
-let mouse_pos = null;
-let angle = null;
-let angleBot = null;
-var shoot = false;
+var delta = 0;
+var now = 0;
+var then = 0;
 
-canvas.addEventListener("mousemove", e => {
-
-    mouse_pos = {
-        x: e.clientX - canvas.offsetLeft,
-        y: e.clientY - canvas.offsetTop
-    }
-});
-
+// CANVAS FUNCTIONS
 canvas.onmousedown = function(e){
-    shoot = true;
-    bullet_index = 35;
-
-    mouseIsDown = true;
+    up = true;
 }
 canvas.onmouseup = function(e){
-    shoot = false;
+    up = false;
 }
 
+function keysdown(e){
+    if(e.keyCode == 38 || e.keyCode == 87 || e.keyCode == 32){
+        up = true;
+    }
+}
+
+function keysup(e){
+    if((e.keyCode == 38 && up == true) || (e.keyCode == 87 && up == true) || (e.keyCode == 32 && up == true)){
+        up = false;
+    }
+}
+
+// RENDER
 function Player(x, y, infected){
     this.x = x;
     this.y = y;
@@ -51,7 +44,7 @@ function Player(x, y, infected){
     this.m = 2.5;
     this.colliding = true;
     this.infected = infected;
-    this.vel = 1;
+    this.vel = 0.45;
     this.jump_vel = 10;
     this.colliding = false;
     this.health = 100;
@@ -64,120 +57,97 @@ function Player(x, y, infected){
         // Graphics
         var img = new Image();
         img.src = '../static/images/logo.png';
-        c.drawImage(img, this.x, this.y, 40, 40)
+        c.drawImage(img, this.x, this.y, 60, 60)
+    }
 
-        // Movement
-        if (left == true && this.x > 1){
-            playerVariable.dx = -5;
-        }
-
-        else if (right == true && this.x < window.innerWidth - 41){
-            playerVariable.dx = 5;
-        }
-
-        else{
-            playerVariable.dx = 0;
-        }
-
+    this.update = function() {
         if (up == true && this.colliding == true){
             jump = 20;
-            jump_vel = 12.5;
+            jump_vel = 1.15;
         }
 
         // Jump
         if (jump > 0){
             if (jump_vel >= 0){
-                jump_vel -= 0.5;
+                jump_vel -= 0.00175 * delta;
             }
-            this.y -= jump_vel;
-            jump -= 1;
+            this.y -= (jump_vel * delta);
+            jump -= 0.00175 * delta;
         }
         else{
             playerVariable.dy = 0;
         }
 
         // Gravity
-        if (this.y < window.innerHeight - 300 - 40 && this.move_y_down == true){
-            if (this.vel < 10){
-                this.vel *= 1.075;
-            }
-
-            this.y += this.vel;
+        if (this.y < ((window.innerHeight * 0.6) - 61) && this.move_y_down == true){
+            this.y += this.vel * delta;
 
             this.colliding = false;
         }
         else{
-            this.vel = 1;
+            this.vel = 0.45;
             this.colliding = true;
         }
 
-        if (this.y > window.innerHeight - 300 - 40){
-            this.y = window.innerHeight - 299 - 40;
+        if (this.y > (window.innerHeight * 0.6) - 60){
+            this.y = ((window.innerHeight * 0.6) - 60);
         }
 
         // Movement
-        this.x += this.dx;
-        this.y += this.dy;
+        this.x += (this.dx * delta);
+        this.y += (this.dy * delta);
+
+        console.log(this.y);
+
+        this.draw();
+    }
+}
+var playerVariable = new Player((canvas.width / 2) - 30, canvas.height / 2);
+
+function setDelta() {
+    now = Date.now();
+    delta = (now - then);
+    then = now;
+}
+
+function Obstacle(speed) {
+    this.x = (canvas.width / 2) - 30;
+    this.speed = speed;
+
+    this.draw = function(){
+        // Graphics
+        var img = new Image();
+        img.src = '../static/images/cactussvg.png';
+        c.drawImage(img, this.x, canvas.height / 2, 60, 60);
+    }
+
+    this.update = function() {
+        // Movement
+        this.x += (this.speed * delta);
+
+        this.draw();
     }
 }
 
-var playerVariable = new Player(canvas.width / 2, canvas.height / 2);
-
-function aim(e){
-    if(e.keyCode == 37 || e.keyCode == 65){
-        left = true;
-    }
-
-    if(e.keyCode == 39 || e.keyCode == 68){
-        right = true;
-    }
-
-    if(e.keyCode == 38 || e.keyCode == 87 || e.keyCode == 32){
-        up = true;
-    }
-
-    if(e.keyCode == 40 || e.keyCode == 83){
-        down = true;
-    }
+function SpawnObstacles() {
+    obstacleArray.push = new Obstacle(-0.5);
 }
 
-function aim2(e){
-    if((e.keyCode == 37 && left == true) || (e.keyCode == 65 && left == true)){
-        playerVariable.dx = 0;
-        playerVariable.dy = 0;
-        left = false;
-    }
+var obstacleArray = [];
 
-    if((e.keyCode == 39 && right == true) || (e.keyCode == 68 && right == true)){
-        playerVariable.dx = 0;
-        playerVariable.dy = 0;
-        right = false;
-    }
-
-    if((e.keyCode == 38 && up == true) || (e.keyCode == 87 && up == true) || (e.keyCode == 32 && up == true)){
-        playerVariable.dx = 0;
-        playerVariable.dy = 0;
-        up = false;
-    }
-
-    if((e.keyCode == 40 && down == true) || (e.keyCode == 83 && down == true)){
-        playerVariable.dx = 0;
-        playerVariable.dy = 0;
-        down = false
-    }
-}
-
-function animate(){
-    requestAnimationFrame(animate);
+//UPDATE
+function main(timeStamp){
+    requestAnimationFrame(main);
     c.clearRect(0, 0, canvas.width, canvas.height);
 
+    setDelta();
+
     c.beginPath();
-    c.rect(0, window.innerHeight - 300, window.innerWidth - 1, 300);
+    c.rect(0, window.innerHeight * 0.595, window.innerWidth - 1, window.innerHeight * 0.405);
     c.fillStyle = "#FFA973";
     c.fill();
 
-    playerVariable.draw();
-    c.restore();
+    playerVariable.update();
 }
 
-animate();
+main();

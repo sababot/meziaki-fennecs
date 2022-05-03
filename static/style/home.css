@@ -225,6 +225,11 @@ canvas {
     padding: 0px;
 }
 
+.wrapper-sections .disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
 .wrapper-sections .box p {
     text-align: center;
     width: 100%;
