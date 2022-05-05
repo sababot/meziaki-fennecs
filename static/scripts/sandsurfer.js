@@ -16,6 +16,7 @@ var then = 0;
 var countdown = 10;
 var obstacle_step = 0;
 var score = 1;
+var width = 60;
 
 // CANVAS FUNCTIONS
 canvas.onmousedown = function(e){
@@ -59,8 +60,8 @@ function Player(x, y, infected){
     this.draw = function(){
         // Graphics
         var img = new Image();
-        img.src = '../static/images/logo.png';
-        c.drawImage(img, this.x, this.y, 60, 60)
+        img.src = '../static/images/logocompressed.png';
+        c.drawImage(img, this.x, this.y, width, width)
     }
 
     this.update = function() {
@@ -82,7 +83,7 @@ function Player(x, y, infected){
         }
 
         // Gravity
-        if (this.y < ((window.innerHeight * 0.6) - 61) && this.move_y_down == true){
+        if (this.y < ((window.innerHeight * 0.75) - (width + 1)) && this.move_y_down == true){
             this.y += this.vel * delta;
 
             this.colliding = false;
@@ -92,8 +93,8 @@ function Player(x, y, infected){
             this.colliding = true;
         }
 
-        if (this.y > (window.innerHeight * 0.6) - 60){
-            this.y = ((window.innerHeight * 0.6) - 60);
+        if (this.y > (window.innerHeight * 0.75) - width){
+            this.y = ((window.innerHeight * 0.75) - width);
         }
 
         // Movement
@@ -103,7 +104,7 @@ function Player(x, y, infected){
         this.draw();
     }
 }
-var playerVariable = new Player((canvas.width / 2) - 30, canvas.height / 2);
+var playerVariable = new Player((canvas.width / 2) - (width / 2), canvas.height / 2);
 
 function setDelta() {
     now = Date.now();
@@ -111,15 +112,16 @@ function setDelta() {
     then = now;
 }
 
-function Obstacle(speed) {
+function Obstacle(x, speed) {
     this.x = canvas.width - 1;
+    this.y = (canvas.height * 0.75);
     this.speed = speed;
 
     this.draw = function(){
         // Graphics
         var img = new Image();
-        img.src = '../static/images/cactussvg.png';
-        c.drawImage(img, this.x, canvas.height / 2 + 20, 60, 60);
+        img.src = '../static/images/cactussvgcompressed.png';
+        c.drawImage(img, this.x, (canvas.height * 0.75) - width, width, width);
     }
 
     this.update = function() {
@@ -133,18 +135,28 @@ function Obstacle(speed) {
 function SpawnObstacles() {
     if (obstacle_step > 4) {
         obstacle_step = 0;
-        obstacleArray[obstacle_step].x = canvas.width + 60;
+        obstacleArray[obstacle_step].x = canvas.width + width;
     }
 
     else {
         obstacle_step++;
-        obstacleArray[obstacle_step].x = canvas.width + 60;
+        obstacleArray[obstacle_step].x = canvas.width + width;
+    }
+}
+
+function collision() {
+    for (var i = 0; i < obstacleArray.length; i++) {
+        if (((obstacleArray[i].x - playerVariable.x) > 0) /*&& ((playerVariable.y + width) > (canvas.height * 0.75) - width)*/) {
+            for (var f = 0; f < obstacleArray.length; f++) {
+                obstacleArray[f].x = -width;
+            }
+        }
     }
 }
 
 var obstacleArray = [];
 for (var i = 0; i < 6; i++) {
-    obstacleArray.push(new Obstacle(-0.35));
+    obstacleArray.push(new Obstacle(canvas.width - 1, -0.35));
 }
 
 //UPDATE
@@ -156,7 +168,7 @@ function main(timeStamp){
 
     // FLOOR
     c.beginPath();
-    c.rect(0, window.innerHeight * 0.595, window.innerWidth - 1, window.innerHeight * 0.405);
+    c.rect(0, window.innerHeight * 0.745, window.innerWidth - 1, window.innerHeight * 0.255);
     c.fillStyle = "#FFA973";
     c.fill();
 
@@ -177,12 +189,15 @@ function main(timeStamp){
         countdown -= 1 * delta;
     }
 
+    // COLLISION
+    // collision();
+    console.log(obstacleArray[i].x - playerVariable.x);
+
     // SCORE
     score += Math.floor(Date.now() * 0.000000000001);
-    console.log(countdown);
-    c.font = "6vw LowRes";
+    c.font = "12vh LowRes";
     c.textAlign = "center";
-    c.fillText(score, canvas.width * 0.5, canvas.height * 0.3);
+    c.fillText(score, canvas.width * 0.5, canvas.height * 0.2);
 }
 
 main();

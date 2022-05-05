@@ -49,4 +49,4 @@ function fennecs() {
 
 fennecs();
 
-setInterval(fennecs, 5000);
+setInterval(fennecs, 3500);
