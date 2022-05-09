@@ -17,10 +17,14 @@ var countdown = 10;
 var obstacle_step = 0;
 var score = 1;
 var width = 60;
+var running = true;
 
 // CANVAS FUNCTIONS
 canvas.onmousedown = function(e){
     up = true;
+    if (running == false){
+        running = true;
+    }
 }
 canvas.onmouseup = function(e){
     up = false;
@@ -29,12 +33,18 @@ canvas.onmouseup = function(e){
 function keysdown(e){
     if(e.keyCode == 38 || e.keyCode == 87 || e.keyCode == 32){
         up = true;
+        if (running == false){
+            running = true;
+        }
     }
 }
 
 function keysup(e){
     if((e.keyCode == 38 && up == true) || (e.keyCode == 87 && up == true) || (e.keyCode == 32 && up == true)){
         up = false;
+        if (running == false){
+            running = true;
+        }
     }
 }
 
@@ -144,12 +154,35 @@ function SpawnObstacles() {
     }
 }
 
+function restart() {
+    for (var i = 0; i < obstacleArray.length; i++){
+        obstacleArray[i].x = -width;
+    }
+
+    score = 0;
+
+    running = false;
+
+    c.globalAlpha = 0.75;
+}
+
+rect_collision = function(x1, y1, size1, x2, y2, size2) {
+  var bottom1, bottom2, left1, left2, right1, right2, top1, top2;
+  left1 = x1 - size1;
+  right1 = x1 + size1;
+  top1 = y1 - size1;
+  bottom1 = y1 + size1;
+  left2 = x2 - size2;
+  right2 = x2 + size2;
+  top2 = y2 - size2;
+  bottom2 = y2 + size2;
+  return !(left1 > right2 || left2 > right1 || top1 > bottom2 || top2 > bottom1);
+};
+
 function collision() {
     for (var i = 0; i < obstacleArray.length; i++) {
-        if (((obstacleArray[i].x - playerVariable.x) > 0) /*&& ((playerVariable.y + width) > (canvas.height * 0.75) - width)*/) {
-            for (var f = 0; f < obstacleArray.length; f++) {
-                obstacleArray[f].x = -width;
-            }
+        if(rect_collision(playerVariable.x, playerVariable.y, width, obstacleArray[i].x, obstacleArray[i].y, 2)){
+            restart();
         }
     }
 }
@@ -175,29 +208,55 @@ function main(timeStamp){
     // PLAYER
     playerVariable.update();
 
-    // OBSTACLES
-    for (var i = 0; i < obstacleArray.length; i++) {
-        obstacleArray[i].update();
-    }
-
-    if (countdown <= 0) {
-        SpawnObstacles();
-        countdown = Math.floor(Math.random() * 1000) + 700;
-    }
-
-    else {
-        countdown -= 1 * delta;
-    }
-
-    // COLLISION
-    // collision();
-    console.log(obstacleArray[i].x - playerVariable.x);
-
     // SCORE
-    score += Math.floor(Date.now() * 0.000000000001);
+    if (running) {
+        score += Math.floor(Date.now() * 0.000000000001);
+    }
     c.font = "12vh LowRes";
     c.textAlign = "center";
     c.fillText(score, canvas.width * 0.5, canvas.height * 0.2);
+
+    // HIGH SCORE
+    c.font = "5vh LowRes";
+    c.textAlign = "left";
+    c.fillStyle = "#FFA973";
+    c.fillText(score, canvas.width * 0.03, canvas.height * 0.165);
+
+    if (running){
+        // OBSTACLES
+        for (var i = 0; i < obstacleArray.length; i++) {
+            obstacleArray[i].update();
+        }
+
+        if (countdown <= 0) {
+            SpawnObstacles();
+            countdown = Math.floor(Math.random() * 1000) + 700;
+        }
+
+        else {
+            countdown -= 1 * delta;
+        }
+
+        // COLLISION
+        collision();
+
+        c.globalAlpha = 1;
+    }
+
+    else {
+
+        c.globalAlpha = 0.5;
+        c.beginPath();
+        c.rect(0, 0, window.innerWidth, window.innerHeight);
+        c.fillStyle = "grey";
+        c.fill();
+
+        c.globalAlpha = 1;
+        c.font = "5vh LowRes";
+        c.textAlign = "center";
+        c.fillStyle = "#595959";
+        c.fillText("press any button to start", canvas.width * 0.5, canvas.height * 0.5);
+    }
 }
 
 main();
