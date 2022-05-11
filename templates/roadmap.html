@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Meziaki Fennecs</title>
+	<link rel="stylesheet" type="text/css" href="../static/style/home.css">
+	<link rel="stylesheet" type="text/css" href="../static/style/roadmap.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/497ef235da.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+	<link rel="icon" href="../static/images/logo.png" type="image/x-icon">
+</head>
+<body id="bod">
+	<!--Background-->
+
+	<!--HEADER-->
+	<div style="display: flex">
+		<img src="../static/images/text_logo.png" class="logo" id="text_logo" style="padding: 0.5vw 1vw 0.5vw 1vw; margin-left: 0vw; width: 15vw; position: relative; margin-top: 0vw; z-index: 2;">
+		<div class="wrapper-sections" id="header_elements" style="padding-left: 24.5vw">
+			<a href="/">
+				<div class="box">
+				  	<p class="box-title">HOME</p>
+				</div>
+			</a>
+			<a href="fennecs" class="disabled">
+				<div class="box">
+				  	<p class="box-title">FENNECS</p>
+				</div>
+			</a>
+			<a href="desert">
+				<div class="box">
+				  	<p class="box-title">THE DESERT</p>
+				</div>
+			</a>
+			<a href="" class="active">
+				<div class="box">
+				  	<p class="box-title">ROADMAP</p>
+				</div>
+			</a>
+			<a href="visualize">
+				<div class="box">
+				  	<p class="box-title">VISUALIZER</p>
+				</div>
+			</a>
+			<a href="https://twitter.com/meziakifennecs" target="_blank">
+				<div class="box">
+				  	<i class="fa-brands fa-twitter"></i>
+				</div>
+			</a>
+			<a href="" target="_blank">
+				<div class="box">
+				  	<i class="fa-brands fa-discord"></i>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<!--ROADMAP-->
+	<ul id="accordion" class="accordion">
+	  	<li id="first-stage" onclick="toggleSection(0)">
+	    	<div class="link" style="background-color: #FFD8C9;"><i class="fa-solid fa-paw"></i>STAGE 1</div>
+	    	<ul class="submenu" style="display: block;">
+	      		<p>Opportunity to mint one of 1809 fennecs, each at 1.5 SOL at the TBA</p>
+	    	</ul>
+	  	</li>
+	  	<li onclick="toggleSection(1)">
+	    	<div class="link"><i class="fa-solid fa-heart"></i>STAGE 2</div>
+	    	<ul class="submenu" style="display: none">
+	      		<p>Bredding of baby fennecs will be unlocked by silisting in the secondary market</p>
+	    	</ul>
+	  	</li>
+	  	<li onclick="toggleSection(2)">
+	    	<div class="link"><i class="fa-solid fa-gift"></i>STAGE 3</div>
+	    	<ul class="submenu" style="display: none">
+	      		<p>A percentage of profit from the mint will be give nto a chosen charity</p>
+	    	</ul>
+	  	</li>
+	  	<li onclick="toggleSection(3)">
+	    	<div class="link"><i class="fa-brands fa-bitcoin"></i>STAGE 4</div>
+	    	<ul class="submenu" style="display: none">
+	      		<p>Release of scaling-resulting in native token receipt</p>
+	    	</ul>
+	  	</li>
+	  	<li onclick="toggleSection(4)">
+	    	<div class="link"><i class="fa-solid fa-eye"></i>STAGE 5</div>
+	    	<ul class="submenu" style="display: none">
+	      		<p>Cross-platform mutation</p>
+	    	</ul>
+	  	</li>
+	  	<li onclick="toggleSection(5)">
+	    	<div class="link"><i class="fa-brands fa-discord"></i>STAGE 6</div>
+	    	<ul class="submenu" style="display: none">
+	      		<p>Rewards from royaltiy fees and building a discord community and a popular bot</p>
+	    	</ul>
+	  	</li>
+	  	<li onclick="toggleSection(6)">
+	    	<div class="link"><i class="fa-solid fa-mobile-button"></i>STAGE 7</div>
+	    	<ul class="submenu" style="display: none">
+	      		<p>Launch of Android/IOS game which will break barrier between reality and digital creation</p>
+	    	</ul>
+	  	</li>
+	  	<li onclick="toggleSection(7)">
+	    	<div class="link"><i class="fa-solid fa-question"></i>STAGE 8</div>
+	    	<ul class="submenu" style="display: none">
+	      		<p>Free air drops to holders</p>
+	    	</ul>
+	  	</li>
+	  	<li onclick="toggleSection(8)">
+	    	<div class="link"><i class="fa-solid fa-rocket"></i>STAGE 9</div>
+	    	<ul class="submenu" style="display: none">
+	      		<p>Creation of future projects</p>
+	    	</ul>
+	  	</li>
+	</ul>
+
+	<!--FOOTER-->
+	<p class="copyright">© 2022, Meziaki Fennecs</p>
+
+	<!--Scripts-->
+	<script src="../static/scripts/roadmap.js"></script>
+</body>
+</html>

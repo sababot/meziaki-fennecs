@@ -18,3 +18,7 @@ def visualize():
 @app.route('/desert')
 def desert():
     return render_template('desert.html')
+
+@app.route('/roadmap')
+def roadmap():
+    return render_template('roadmap.html')

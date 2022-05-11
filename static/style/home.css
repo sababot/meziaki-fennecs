@@ -196,7 +196,7 @@ canvas {
 
 .wrapper-sections {
     padding-left: 41vw;
-    position: fixed;
+    position: relative;
     justify-content: center;
     padding-top: 2vw;
     padding-bottom: 2.5vw;
@@ -570,4 +570,41 @@ canvas {
     position: absolute;
     bottom: 0%;
     left: 47.5vw;
+}
+
+.loader-background {
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFE2D7;
+    margin: 0;
+    position: fixed;
+    z-index: 11;
+    transition: opacity 1s;
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 6vw;
+  height: 6vw;
+  margin: -4vw 0 0 -4vw;
+  border: 1vw solid #FFD8C9;
+  border-radius: 50%;
+  border-top: 1vw solid #FFA973;
+  border-bottom: 1vw solid #FFA973;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  transition: opacity 0.25s;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
