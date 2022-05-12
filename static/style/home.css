@@ -608,3 +608,22 @@ canvas {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+.roadmap-button {
+    bottom: 1vw;
+    right: 2vw;
+    z-index: 10;
+    position: fixed;
+    height: 7.5vw;
+    width: 15vw;
+}
+
+.rock-img {
+    width: 100%;
+    transition: all 0.25s;
+}
+
+.rock-img:hover {
+    transform: translate(-7.5%, -7.5%);
+    width: 115%;
+}
