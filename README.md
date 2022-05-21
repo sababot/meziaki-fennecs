@@ -1,10 +1,10 @@
-# Meziaki Fennecs
-An exclusive fennec NFT collection on the Solana blockchain
+<h1 align="center">Meziaki Fennecs</h1>
+An exclusive NFT collection of 1809 fennecs on the Solana blockchain.
 
-# Release Date
+<h1 align="center">Mint Date</h1>
 18th April
 
-# Team
+<h1 align="center">Team</h1>
 - Aitor Garcia Hombrados
 - Marcos Garcia Hombrados
 - Adem Bourabi
