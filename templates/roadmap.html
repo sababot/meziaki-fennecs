@@ -5,11 +5,6 @@
 	<link rel="stylesheet" type="text/css" href="../static/style/home.css">
 	<link rel="stylesheet" type="text/css" href="../static/style/roadmap.css">
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"></script>
-
     <script src="https://kit.fontawesome.com/497ef235da.js" crossorigin="anonymous"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +12,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 	<link rel="icon" href="../static/images/logo.png" type="image/x-icon">
 </head>
-<body id="bod">
+<body id="bod" style="overflow-x: hidden;">
 	<!--Background-->
 
 	<!--HEADER-->
@@ -62,7 +57,19 @@
 		</div>
 	</div>
 
-	<!--ROADMAP-->
+	<div id="section-0" class="section" style="width: 50vw; height: 45vw; background-color: #FFDCCF;" onmousedown="expand(0)">
+		<div id="section-1" class="section" style="width: 40vw; height: 35vw; background-color: #E9CDC3;" onmousedown="expand(1)">
+			<div id="section-2" class="section" style="width: 30vw; height: 25vw; background-color: #FFD3AB;" onmousedown="expand(2)">
+				<div id="section-3" class="section" style="width: 20vw; height: 15vw; background-color: #FFD38C;" onmousedown="expand(3)">
+					<div id="section-4" class="section" style="width: 10vw; height: 5vw; background-color: #F0A373;" onmousedown="expand(4)">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--
 	<ul id="accordion" class="accordion">
 	  	<li id="first-stage" onclick="toggleSection(0)">
 	    	<div class="link" style="background-color: #FFD8C9;"><i class="fa-solid fa-paw"></i>STAGE 1</div>
@@ -119,6 +126,7 @@
 	    	</ul>
 	  	</li>
 	</ul>
+	-->
 
 	<!--FOOTER-->
 	<p class="copyright">© 2022, Meziaki Fennecs</p>

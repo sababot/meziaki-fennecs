@@ -18,13 +18,12 @@ var obstacle_step = 0;
 var score = 1;
 var width = 60;
 var running = true;
+var menutext = '';
+var highscore = 0;
 
 // CANVAS FUNCTIONS
 canvas.onmousedown = function(e){
     up = true;
-    if (running == false){
-        running = true;
-    }
 }
 canvas.onmouseup = function(e){
     up = false;
@@ -33,19 +32,31 @@ canvas.onmouseup = function(e){
 function keysdown(e){
     if(e.keyCode == 38 || e.keyCode == 87 || e.keyCode == 32){
         up = true;
-        if (running == false){
-            running = true;
-        }
     }
 }
 
 function keysup(e){
     if((e.keyCode == 38 && up == true) || (e.keyCode == 87 && up == true) || (e.keyCode == 32 && up == true)){
         up = false;
-        if (running == false){
-            running = true;
-        }
     }
+}
+
+function start() {
+    if (running == false) {
+        running = true;
+    }
+
+    score = 0;
+
+    for (var i = 0; i < obstacleArray.length; i++){
+        obstacleArray[i].x = -width;
+    }
+
+    for (var i = 0; i < obstacleArray.length; i++){
+        obstacleArray[i].speed = -0.35;
+    }
+
+    document.getElementById('start_button').style.opacity = 0;
 }
 
 // RENDER
@@ -70,7 +81,7 @@ function Player(x, y, infected){
     this.draw = function(){
         // Graphics
         var img = new Image();
-        img.src = '../static/images/logocompressed.png';
+        img.src = '../static/images/logo.webp';
         c.drawImage(img, this.x, this.y, width, width)
     }
 
@@ -81,15 +92,17 @@ function Player(x, y, infected){
         }
 
         // Jump
-        if (jump > 0){
-            if (jump_vel >= 0){
-                jump_vel -= 0.00175 * delta;
+        if (running){
+            if (jump > 0){
+                if (jump_vel >= 0){
+                    jump_vel -= 0.00175 * delta;
+                }
+                this.y -= (jump_vel * delta);
+                jump -= 0.00175 * delta;
             }
-            this.y -= (jump_vel * delta);
-            jump -= 0.00175 * delta;
-        }
-        else{
-            playerVariable.dy = 0;
+            else{
+                playerVariable.dy = 0;
+            }
         }
 
         // Gravity
@@ -130,7 +143,7 @@ function Obstacle(x, speed) {
     this.draw = function(){
         // Graphics
         var img = new Image();
-        img.src = '../static/images/cactussvgcompressed.png';
+        img.src = '../static/images/cactus.webp';
         c.drawImage(img, this.x, (canvas.height * 0.75) - width, width, width);
     }
 
@@ -156,14 +169,20 @@ function SpawnObstacles() {
 
 function restart() {
     for (var i = 0; i < obstacleArray.length; i++){
-        obstacleArray[i].x = -width;
+        obstacleArray[i].speed = 0;
     }
-
-    score = 0;
 
     running = false;
 
-    c.globalAlpha = 0.75;
+    document.getElementById('start_button').style.opacity = 1;
+}
+
+function countdown() {
+    var count = 3;
+
+    while (count > 0) {
+        count -= 1;
+    }
 }
 
 rect_collision = function(x1, y1, size1, x2, y2, size2) {
@@ -217,17 +236,18 @@ function main(timeStamp){
     c.fillText(score, canvas.width * 0.5, canvas.height * 0.2);
 
     // HIGH SCORE
+    highscore = localStorage.getItem("highscore");
     c.font = "5vh LowRes";
-    c.textAlign = "left";
+    c.textAlign = "right";
     c.fillStyle = "#FFA973";
-    c.fillText(score, canvas.width * 0.03, canvas.height * 0.165);
+    c.fillText(highscore, canvas.width * 0.97, canvas.height * 0.165);
+
+    // OBSTACLES
+    for (var i = 0; i < obstacleArray.length; i++) {
+        obstacleArray[i].update();
+    }
 
     if (running){
-        // OBSTACLES
-        for (var i = 0; i < obstacleArray.length; i++) {
-            obstacleArray[i].update();
-        }
-
         if (countdown <= 0) {
             SpawnObstacles();
             countdown = Math.floor(Math.random() * 1000) + 700;
@@ -239,23 +259,17 @@ function main(timeStamp){
 
         // COLLISION
         collision();
-
-        c.globalAlpha = 1;
     }
 
     else {
-
-        c.globalAlpha = 0.5;
-        c.beginPath();
-        c.rect(0, 0, window.innerWidth, window.innerHeight);
-        c.fillStyle = "grey";
-        c.fill();
-
-        c.globalAlpha = 1;
         c.font = "5vh LowRes";
         c.textAlign = "center";
         c.fillStyle = "#595959";
-        c.fillText("press any button to start", canvas.width * 0.5, canvas.height * 0.5);
+        c.fillText(menutext, canvas.width * 0.5, canvas.height * 0.5);
+    }
+
+    if(score > highscore){
+        localStorage.setItem("highscore", score);
     }
 }
 
