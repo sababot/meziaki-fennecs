@@ -540,7 +540,7 @@ canvas {
     background-color: #FFE2D7;
     margin: 0;
     position: fixed;
-    z-index: 11;
+    z-index: 20;
     transition: opacity 1s;
 }
 
@@ -549,13 +549,13 @@ canvas {
   left: 50%;
   top: 50%;
   z-index: 1;
-  width: 6vw;
-  height: 6vw;
+  width: 6vh;
+  height: 6vh;
   margin: -4vw 0 0 -4vw;
-  border: 1vw solid #FFD8C9;
+  border: 1vh solid #FFD8C9;
   border-radius: 50%;
-  border-top: 1vw solid #FFA973;
-  border-bottom: 1vw solid #FFA973;
+  border-top: 1vh solid #FFA973;
+  border-bottom: 1vh solid #FFA973;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
   transition: opacity 0.25s;
