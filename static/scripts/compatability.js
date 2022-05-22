@@ -1,6 +1,6 @@
 var desert = document.getElementById("desert-svg");
 
-    if ((window.innerWidth / window.innerHeight) < 0.75) {
+if ((window.innerWidth / window.innerHeight) < 0.75) {
         desert.src = "../static/images/desertsvg_portrait.png";
 
         document.getElementById('sidebar-sleep').style.display = 'block';
@@ -23,7 +23,7 @@ var desert = document.getElementById("desert-svg");
 
         document.getElementById('rock').style.display = 'block';
 
-        document.getElementById('morph-text').style.transform = 'rotate(0deg) translate(-143.5%)';
+        document.getElementById('morph-text').style.transform = 'rotate(0deg) translate(-50%)';
         document.getElementById('morph-text').style.width = '90vw';
         document.getElementById('morph-text').style.marginTop = '0';
     }
@@ -37,7 +37,7 @@ var desert = document.getElementById("desert-svg");
 
         document.getElementById('rock').style.display = 'none';
 
-        document.getElementById('morph-text').style.transform = 'rotate(0deg) translate(-143.5%)';
+        document.getElementById('morph-text').style.transform = 'rotate(0deg) translate(-50%)';
         document.getElementById('morph-text').style.width = '90vw';
         document.getElementById('morph-text').style.marginTop = '7.5vh';
     }
