@@ -24,43 +24,83 @@
 	</div>
 
 	<!--HEADER-->
-	<img src="../static/images/text_logo.png" class="logo" id="text_logo" style="padding: 0.5vw 1vw 0.5vw 1vw; margin-left: 0vw; width: 15vw; position: fixed; margin-top: 0vw;">
-	<div class="wrapper-sections" id="header_elements">
-		<a href="" class="active">
-			<div class="box">
-			  	<p class="box-title" class="active">HOME</p>
-			</div>
-		</a>
-		<a href="fennecs" class="disabled">
-			<div class="box">
-			  	<p class="box-title">FENNECS</p>
-			</div>
-		</a>
-		<a href="desert">
-			<div class="box">
-			  	<p class="box-title">THE DESERT</p>
-			</div>
-		</a>
-		<a href="roadmap" class="disabled">
-			<div class="box">
-			  	<p class="box-title">ROADMAP</p>
-			</div>
-		</a>
-		<a href="visualize">
-			<div class="box">
-			  	<p class="box-title">VISUALIZER</p>
-			</div>
-		</a>
-		<a href="https://twitter.com/meziakifennecs" target="_blank">
-			<div class="box">
-			  	<i class="fa-brands fa-twitter"></i>
-			</div>
-		</a>
-		<a href="" target="_blank">
-			<div class="box">
-			  	<i class="fa-brands fa-discord"></i>
-			</div>
-		</a>
+	<div id="header-sleep">
+		<img src="../static/images/text_logo.png" class="logo" id="text_logo" style="padding: 0.5vw 1vw 0.5vw 1vw; margin-left: 0vw; width: 15vw; position: fixed; margin-top: 0vw;">
+		<div class="wrapper-sections" id="header_elements">
+			<a href="" class="active">
+				<div class="box">
+				  	<p class="box-title" class="active">HOME</p>
+				</div>
+			</a>
+			<a href="fennecs" class="disabled">
+				<div class="box">
+				  	<p class="box-title">FENNECS</p>
+				</div>
+			</a>
+			<a href="desert">
+				<div class="box">
+				  	<p class="box-title">THE DESERT</p>
+				</div>
+			</a>
+			<a href="roadmap" class="disabled">
+				<div class="box">
+				  	<p class="box-title">ROADMAP</p>
+				</div>
+			</a>
+			<a href="visualize">
+				<div class="box">
+				  	<p class="box-title">VISUALIZER</p>
+				</div>
+			</a>
+			<a href="https://twitter.com/meziakifennecs" target="_blank">
+				<div class="box">
+				  	<i class="fa-brands fa-twitter"></i>
+				</div>
+			</a>
+			<a href="" target="_blank">
+				<div class="box">
+				  	<i class="fa-brands fa-discord"></i>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div id="sidebar-sleep">
+		<img src="../static/images/text_logo.png" class="logo" id="text_logo" style="width: 25vh; margin-left: -1.5vw; position:fixed; top: 2vh">
+		<button class="sidebar-button" onclick="toggleSidebar()">
+			<i class="fa-solid fa-bars"></i>
+		</button>
+	</div>
+
+	<div class="sidebar" id="sidebar">
+		<button class="exit-button" onclick="toggleSidebar()">
+			<i class="fa-solid fa-xmark"></i>
+		</button>
+		<div class="items">
+			<img src="../static/images/text_logo.png" class="logo" id="text_logo" style="width: 35vw; margin-left: -2.5vw">
+			<a href="" class="active">
+				<p style="width: 15vw;">HOME</p>
+			</a>
+			<a href="fennecs" class="disabled">
+				<p style="width: 22.5vw;">FENNECS</p>
+			</a>
+			<a href="desert">
+				<p style="width: 30vw;">THE DESERT</p>
+			</a>
+			<a href="roadmap" class="disabled">
+				<p style="width: 24vw;">ROADMAP</p>
+			</a>
+			<a href="visualize">
+				<p style="width: 30vw;">VISUALIZER</p>
+			</a>
+			<a href="https://twitter.com/meziakifennecs" target="_blank">
+				<i class="fa-brands fa-twitter"></i>
+			</a>
+			<a href="" target="_blank">
+				<i class="fa-brands fa-discord"></i>
+			</a>
+		</div>
+		<img src="../static/images/Joranguspfp.png" class="fennec-pop">
 	</div>
 
 	<img src="../static/images/text-gif/meziakitext-text2.gif" style="width: 90%; position: fixed; left: 5%; top: 15vh">
@@ -105,5 +145,6 @@
 	<script src="../static/scripts/textmerge.js"></script>
 	<script src="../static/scripts/dune.js"></script>
 	<script src="../static/scripts/loader.js"></script>
+	<script src="../static/scripts/sidebar.js"></script>
 </body>
 </html>

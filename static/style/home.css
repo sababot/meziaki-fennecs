@@ -16,7 +16,7 @@
 }
 
 body {
-    background-color: #f9ded1;
+    background-color: #FFDED1;
     overflow-x: hidden;
 }
 
@@ -588,4 +588,113 @@ canvas {
 .rock-img:hover {
     transform: translate(-7.5%, -7.5%);
     width: 115%;
+}
+
+.sidebar-button {
+    position: fixed;
+    top: 2.5vh;
+    right: 2.5vh;
+    border: none;
+    outline: none;
+    background-color: #FFD8C9;
+    padding: 1vh;
+    width: 10vh;
+    height: 10vh;
+    z-index: 12;
+}
+
+.sidebar-button i {
+    margin-top: -0.25vh;
+    font-size: 8vh;
+    text-align: center;
+    color: #FFA973;
+}
+
+.sidebar {
+    transition: transform 0.5s;
+    position: fixed;
+    background-color: #FFDED1;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 13;
+    transform: translate(100vw);
+}
+
+.sidebar .items a {
+    text-decoration: none;
+}
+
+.sidebar .items a:hover {
+    text-decoration: none;
+    background-color: #FFF1EC;
+    color: #fff;
+    padding: 0px;
+}
+
+.sidebar .disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.sidebar .items p {
+    text-align: left;
+    width: 100%;
+    color: #FFA973;
+    font-size: 5vw;
+    margin-top: 2.5vh;
+    margin-left: 2.5vh;
+    padding-left: 1vh;
+    padding-top: 1.25vh;
+    background-color: #FFD8C9;
+    border-radius: 1vh;
+}
+
+.sidebar .items i {
+    text-align: center;
+    color: #FFA973;
+    font-size: 5vw;
+    margin-top: 2.5vh;
+    margin-left: 2.5vh;
+    text-decoration: none;
+    background-color: #FFD8C9;
+    padding: 1vh;
+    border-radius: 1vh;
+    width: 7.5vw;
+}
+
+.sidebar .items .active{
+    text-decoration: none;
+    background-color: #FFCCB9;
+    color: #fff;
+    padding: 0px;
+}
+
+.sidebar .exit-button {
+    position: fixed;
+    top: 2.5vw;
+    right: 2.5vw;
+    border: none;
+    outline: none;
+    background-color: #FFD8C9;
+    padding: 1vh;
+    width: 9vw;
+    height: 9vw;
+    z-index: 12;
+}
+
+.sidebar .exit-button i {
+    margin-top: -0.75vh;
+    font-size: 9vw;
+    text-align: center;
+    color: #FFA973;
+}
+
+.sidebar .fennec-pop {
+    position: fixed;
+    width: 50vw;
+    transform: rotate(-90deg);
+    right: 0;
+    top: 15vh;
 }
