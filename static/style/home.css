@@ -597,15 +597,15 @@ canvas {
     border: none;
     outline: none;
     background-color: #FFD8C9;
-    padding: 1vh;
-    width: 10vh;
-    height: 10vh;
+    padding: 0.5vh;
+    width: 7vh;
+    height: 7vh;
     z-index: 12;
 }
 
 .sidebar-button i {
-    margin-top: -0.25vh;
-    font-size: 8vh;
+    margin-top: -0vh;
+    font-size: 6vh;
     text-align: center;
     color: #FFA973;
 }
@@ -643,24 +643,24 @@ canvas {
     width: 100%;
     color: #FFA973;
     font-size: 5vw;
-    margin-top: 2.5vh;
-    margin-left: 2.5vh;
-    padding-left: 1vh;
-    padding-top: 1.25vh;
+    margin-top: 2.5vw;
+    margin-left: 2.5vw;
+    padding-left: 1vw;
+    padding-top: 1vw;
     background-color: #FFD8C9;
-    border-radius: 1vh;
+    border-radius: 1vw;
 }
 
 .sidebar .items i {
     text-align: center;
     color: #FFA973;
     font-size: 5vw;
-    margin-top: 2.5vh;
-    margin-left: 2.5vh;
+    margin-top: 2.5vw;
+    margin-left: 2.5vw;
     text-decoration: none;
     background-color: #FFD8C9;
-    padding: 1vh;
-    border-radius: 1vh;
+    padding: 1vw;
+    border-radius: 1vw;
     width: 7.5vw;
 }
 
