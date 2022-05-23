@@ -10,10 +10,6 @@ var desert = document.getElementById("desert-svg");
     if ((window.innerWidth / window.innerHeight) < 0.75) {
         desert.src = "../static/images/desertsvg_portrait.png";
 
-        document.getElementById('sidebar-sleep').style.display = 'block';
-
-        document.getElementById('header-sleep').style.display = 'none';
-
         document.getElementById('rock').style.display = 'none';
 
         //document.getElementById('morph-text').style.transform = 'rotate(90deg) translate(0vw, 143.5%)';
@@ -27,10 +23,6 @@ var desert = document.getElementById("desert-svg");
     else if ((window.innerWidth / window.innerHeight) > 1.25){
         desert.src = "../static/images/desertsvg_landscape_compressed.webp";
 
-        document.getElementById('sidebar-sleep').style.display = 'none';
-
-        document.getElementById('header-sleep').style.display = 'block';
-
         document.getElementById('rock').style.display = 'block';
 
         //document.getElementById('morph-text').style.transform = 'rotate(0deg) translate(-50%)';
@@ -43,10 +35,6 @@ var desert = document.getElementById("desert-svg");
 
     else if ((window.innerWidth / window.innerHeight) < 1.25){
         desert.src = "../static/images/desertsvg_portrait.png";
-
-        document.getElementById('sidebar-sleep').style.display = 'block';
-
-        document.getElementById('header-sleep').style.display = 'none';
 
         document.getElementById('rock').style.display = 'none';
 
@@ -69,10 +57,6 @@ window.addEventListener('resize', function(){
     if ((window.innerWidth / window.innerHeight) < 0.75) {
         desert.src = "../static/images/desertsvg_portrait.png";
 
-        document.getElementById('sidebar-sleep').style.display = 'block';
-
-        document.getElementById('header-sleep').style.display = 'none';
-
         document.getElementById('rock').style.display = 'none';
 
         //document.getElementById('morph-text').style.transform = 'rotate(90deg) translate(0vw, 143.5%)';
@@ -86,10 +70,6 @@ window.addEventListener('resize', function(){
     else if ((window.innerWidth / window.innerHeight) > 1.25){
         desert.src = "../static/images/desertsvg_landscape_compressed.webp";
 
-        document.getElementById('sidebar-sleep').style.display = 'none';
-
-        document.getElementById('header-sleep').style.display = 'block';
-
         document.getElementById('rock').style.display = 'block';
 
         //document.getElementById('morph-text').style.transform = 'rotate(0deg) translate(-50%)';
@@ -102,10 +82,6 @@ window.addEventListener('resize', function(){
 
     else if ((window.innerWidth / window.innerHeight) < 1.25){
         desert.src = "../static/images/desertsvg_portrait.png";
-
-        document.getElementById('sidebar-sleep').style.display = 'block';
-
-        document.getElementById('header-sleep').style.display = 'none';
 
         document.getElementById('rock').style.display = 'none';
 

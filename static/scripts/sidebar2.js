@@ -30,7 +30,7 @@ function toggleSidebar() {
 if ((window.innerWidth / window.innerHeight) > 1.25){
     document.getElementById('sidebar-sleep').style.display = 'none';
 
-    document.getElementById('header-sleep').style.display = 'block';
+    document.getElementById('header-sleep').style.display = 'flex';
 }
 
 else if ((window.innerWidth / window.innerHeight) < 1.25){
@@ -43,7 +43,7 @@ window.addEventListener('resize', function(){
     if ((window.innerWidth / window.innerHeight) > 1.25){
         document.getElementById('sidebar-sleep').style.display = 'none';
 
-        document.getElementById('header-sleep').style.display = 'block';
+        document.getElementById('header-sleep').style.display = 'flex';
     }
 
     else if ((window.innerWidth / window.innerHeight) < 1.25){

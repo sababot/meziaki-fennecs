@@ -21,7 +21,7 @@
 	<!--Background-->
 
 	<!--HEADER-->
-	<div style="display: flex">
+	<div style="display: flex" id="header-sleep">
 		<img src="../static/images/text_logo.png" class="logo" id="text_logo" style="padding: 0.5vw 1vw 0.5vw 1vw; margin-left: 0vw; width: 15vw; position: relative; margin-top: 0vw; z-index: 2;">
 		<div class="wrapper-sections" id="header_elements" style="padding-left: 24.75vw">
 			<a href="/">
@@ -62,14 +62,64 @@
 		</div>
 	</div>
 
+	<!--SIDEBAR-->
+	<div id="sidebar-sleep" style="">
+		<img src="../static/images/text_logo.png" class="logo" id="text_logo" style="width: 25vh; margin-left: -1.5vw; top: 1vh">
+		<button class="sidebar-button" onclick="toggleSidebar()" style="position: block">
+			<i class="fa-solid fa-bars"></i>
+		</button>
+	</div>
+
+	<div class="sidebar" id="sidebar">
+		<button class="exit-button" onclick="toggleSidebar()">
+			<i class="fa-solid fa-xmark"></i>
+		</button>
+		<div class="items">
+			<img src="../static/images/text_logo.png" class="logo" id="text_logo" style="width: 35vw; margin-left: -2.5vw">
+			<a href="/" class="active">
+				<p style="width: 15vw;">HOME</p>
+			</a>
+			<a class="disabled">
+				<p style="width: 22.5vw;">FENNECS</p>
+			</a>
+			<a href="">
+				<p style="width: 30vw;">THE DESERT</p>
+			</a>
+			<a class="disabled">
+				<p style="width: 24vw;">ROADMAP</p>
+			</a>
+			<a href="visualize">
+				<p style="width: 30vw;">VISUALIZER</p>
+			</a>
+			<a href="https://twitter.com/meziakifennecs" target="_blank">
+				<i class="fa-brands fa-twitter"></i>
+			</a>
+			<a href="" target="_blank">
+				<i class="fa-brands fa-discord"></i>
+			</a>
+		</div>
+		<img src="../static/images/Joranguspfp.png" class="fennec-pop">
+
+		<!--<img src="../static/images/TungTTpfp.png" class="fennec-pop-2">-->
+	</div>
+
 	<!--THE DESERT-->
-	<p class="indicator" style="margin: 0vw 6vw 0vw 6vw; padding-top: 5vw; border: none; font-size: 4vw; font-weight: bolder;">THE DESERT</p>
-	<div class="manifesto-intro">
+	<p class="indicator" style="margin: 0vw 6vw 0vw 6vw; padding-top: 5vw; border: none; font-size: 7vh; font-weight: bolder;">THE DESERT</p>
+	<div class="manifesto-intro" id="manifesto">
 		<div>
 			<p class="manifesto">An Exceptional  project  started by 4 NFT enthusiasts, launching on the Solana Blockchain, revolving around the “Fennec fox”-Algeria’s National animal.<br><br>Around the clock, the team prepares a launch of 1809 fennec NFTs. With a plethora of distinct traits and a multitude of backgrounds- we voluntarily undertake this challenge to depict the abundance of originality in the life of a fennec.<br><br>A composed selected team with copious skills to grant access to opportunities and new gaming experiences.<br><br>With the upcoming release of our IOS game, we undertake this enjoyable-yet challenging task to represent the might of this great animal and his expertise when it comes to life adaptability in the most vast and arid desert in the world.<br><br>We've come to stay.</p>
 		</div>
 		<div>
 			<img src="../static/images/window.png" class="intro-image">
+		</div>
+	</div>
+
+	<div class="manifesto-intro-mobile" id="manifesto-mobile">
+		<div>
+			<p class="manifesto-mobile">An Exceptional  project  started by 4 NFT enthusiasts, launching on the Solana Blockchain, revolving around the “Fennec fox”-Algeria’s National animal.<br><br>Around the clock, the team prepares a launch of 1809 fennec NFTs. With a plethora of distinct traits and a multitude of backgrounds- we voluntarily undertake this challenge to depict the abundance of originality in the life of a fennec.<br><br>A composed selected team with copious skills to grant access to opportunities and new gaming experiences.<br><br>With the upcoming release of our IOS game, we undertake this enjoyable-yet challenging task to represent the might of this great animal and his expertise when it comes to life adaptability in the most vast and arid desert in the world.<br><br>We've come to stay.</p>
+		</div>
+		<div>
+			<img src="../static/images/window.png" class="intro-image-mobile">
 		</div>
 	</div>
 
@@ -80,7 +130,7 @@
 
 	<!--TEAM-->
 	<p class="indicator" style="margin: 2.5vw 6vw 0vw 6vw; padding-top: 10vw">TEAM</p>
-	<div class="team-sections">
+	<div class="team-sections" id="team-sections">
 		<a href="">
 			<div class="box">
 				<img src="../static/images/Joranguspfp.png" style="margin-bottom: 1vw;">
@@ -143,10 +193,75 @@
 		</a>
 	</div>
 
+	<!--TEAM MOBILE-->
+	<div class="team-sections-mobile" id="team-sections-mobile">
+		<a href="">
+			<div class="box">
+				<img src="../static/images/Joranguspfp.png" style="margin-bottom: 1vw;">
+				<div class="team-text">
+					<p class="team-title">JORANGUS</p>
+					<p class="role">COFOUNDER & BLOCKCHAIN/<br>SOFTWARE DEVELOPER</p>
+					<p class="description">Accomplished product and blockchain developer, pivoted towards the practice of digital art and software development.</p>
+				</div>
+			</div>
+		</a>
+		<a href="">
+			<div class="box">
+				<img src="../static/images/Asparaguspfp.png" style="margin-bottom: 1vw;">
+				<div class="team-text">
+					<p class="team-title">ASPARAGUS</p>
+					<p class="role">COFOUNDER & MARKETING DIRECTOR</p>
+					<p class="description">Strategic promotionalist running countless operations and heavily contributing to both the team and work ethic, ensuring a strong community.</p>
+				</div>
+			</div>
+		</a>
+		<a href="">
+			<div class="box">
+				<img src="../static/images/Sababotpfp.png" style="margin-bottom: 1vw;">
+				<div class="team-text">
+					<p class="team-title">SABABOT</p>
+					<p class="role">COFOUNDER & FULL-STACK DEVELOPER</p>
+					<p class="description">Years of web development and a passion for computer science has resulted in thorough proficiency and formidable projects.</p>
+				</div>
+			</div>
+		</a>
+		<a href="">
+			<div class="box">
+				<img src="../static/images/CaseSagepfp.png" style="margin-bottom: 1vw;">
+				<div class="team-text">
+					<p class="team-title">CASESAGE</p>
+					<p class="role">COFOUNDER & AUTHOR</p>
+					<p class="description">Experienced writer ensuring the best illustrations, has worked on numerous descriptive pieces.</p>
+				</div>
+			</div>
+		</a>
+		<a href="">
+			<div class="box">
+				<img src="../static/images/TungTTpfp.png" style="margin-bottom: 1vw;">
+				<div class="team-text">
+					<p class="team-title">TUNGTT</p>
+					<p class="role">DIGITAL ARTIST</p>
+					<p class="description">A skilful graphic engineer with copious formidable works and an abundance of artistic expertise.</p>
+				</div>
+			</div>
+		</a>
+		<a href="">
+			<div class="box">
+				<img src="../static/images/Kookpfp.png" style="margin-bottom: 1vw;">
+				<div class="team-text">
+					<p class="team-title">KOOK</p>
+					<p class="role">SOCIAL INFLUENCER</p>
+					<p class="description">Entrepreneurial mindset with a substantial following and media influence.</p>
+				</div>
+			</div>
+		</a>
+	</div>
+
 	<!--EXPLORE-->
 	<p class="indicator" style="margin: 0vw 6vw 0vw 6vw; padding-top: 2.5vw">EXPLORE</p>
-	<p class="manifesto" style="margin-top: 2vw;">Find out more about who we are, what we do, and what it is all about. Only those with enough courage and loyalty will be able to make it all the way, those who can't make it through it all will be punished with no mercy...</p>
-	<div class="explore-sections">
+	<p class="manifesto" id="manifesto-text" style="margin-top: 2vw;">Find out more about who we are, what we do, and what it is all about. Only those with enough courage and loyalty will be able to make it all the way, those who can't make it through it all will be punished with no mercy...</p>
+	<p class="manifesto-text-mobile" id ="manifesto-text-mobile" style="margin-top: 2vh;">Find out more about who we are, what we do, and what it is all about. Only those with enough courage and loyalty will be able to make it all the way, those who can't make it through it all will be punished with no mercy...</p>
+	<div class="explore-sections" id="explore">
 		<a href="/roadmap">
 			<div class="box">
 				<div class="team-text">
@@ -185,6 +300,36 @@
 		</a>
 	</div>
 
+	<div class="explore-sections-mobile" id="explore-mobile">
+		<a href="/roadmap">
+			<div class="box">
+				<div class="team-text">
+					<p class="team-title">ROADMAP</p>
+					<p class="role">FOLLOW THE JOURNEY</p>
+					<p class="description">Follow the progress and journey of Meziaki Fennecs and observe a global view of the project and its current direction.</p>
+				</div>
+			</div>
+		</a>
+		<a href="https://twitter.com/meziakifennecs" target="_blank">
+			<div class="box">
+				<div class="team-text">
+					<p class="team-title">TWITTER</p>
+					<p class="role">BE THE FIRST TO FIND OUT</p>
+					<p class="description">In our twitter, we post relevant information, giveaways, sneakpeaks and many more useful information about our project.</p>
+				</div>
+			</div>
+		</a>
+		<a href="/visualize">
+			<div class="box">
+				<div class="team-text">
+					<p class="team-title">VISUALIZER</p>
+					<p class="role">A FUN PLACE TO PLAY WITH FENNECS</p>
+					<p class="description">A fun little runner where you have a variety of fennecs to choose from.)</p>
+				</div>
+			</div>
+		</a>
+	</div>
+
 	<!--FAQ-->
 	<p class="indicator" style="margin: 7.5vw 6vw 0vw 6vw; padding-top: 2.5vw">FAQ</p>
 	<div class="faq-sections">
@@ -208,6 +353,7 @@
 	<p class="copyright">© 2022, Meziaki Fennecs</p>
 
 	<!--Scripts-->
-	<script src="../static/scripts/background.js"></script>
+	<script src="../static/scripts/sidebar2.js"></script>
+	<script src="../static/scripts/desert.js"></script>
 </body>
 </html>
