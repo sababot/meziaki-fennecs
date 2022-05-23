@@ -167,6 +167,17 @@
     background-color: #FFCCB9;
 }
 
+.explore-sections .disabled {
+    position: relative;
+    text-decoration: none;
+    background-color: #FFD8C9;
+    color: #fff;
+    padding: 0px;
+    font-size: 1.25vw;
+    border: none;
+    opacity: 0.5;
+}
+
 .explore-sections .box .team-text {
     margin: 1vw 1vw 1vw 1vw;
 }
@@ -205,7 +216,7 @@
     grid-gap: 2.5vh;
     background-color: transparent;
     color: #444;
-    grid-template-rows: repeat(2, 20vh) 22.5vh;
+    grid-template-rows: 20vh 22.5vh;
     grid-template-columns: repeat(1, 90vw);
 }
 

@@ -624,6 +624,10 @@ canvas {
     text-decoration: none;
 }
 
+.sidebar .items div {
+    opacity: 0.5;
+}
+
 .sidebar .items a:hover {
     text-decoration: none;
     background-color: #FFF1EC;

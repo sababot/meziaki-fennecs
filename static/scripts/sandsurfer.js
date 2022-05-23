@@ -4,6 +4,11 @@ var c = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+window.addEventListener('resize', function(){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+
 document.addEventListener('keydown', keysdown, true);
 document.addEventListener('keyup', keysup, true);
 
@@ -270,6 +275,19 @@ function main(timeStamp){
 
     if(score > highscore){
         localStorage.setItem("highscore", score);
+    }
+
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+        running = false;
+        c.beginPath();
+        c.rect(0, 0, window.innerWidth, window.innerHeight);
+        c.fillStyle = "#FFDED1";
+        c.fill();
+
+        c.font = "5vw LowRes";
+        c.textAlign = "center";
+        c.fillStyle = "#FFA973";
+        c.fillText('currently only available for pc', canvas.width * 0.5, canvas.height * 0.5);
     }
 }
 
