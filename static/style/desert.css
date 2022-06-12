@@ -6,7 +6,7 @@
     font-size: 5vh;
     color: #F0A373;
     border-bottom: solid;
-    border-width: 0.25vw;
+    border-width: 0.5vh;
     border-color: #E9CDC3;
 }
 
@@ -70,6 +70,7 @@
 }
 
 .team-sections-mobile {
+    padding-bottom: 10vh;
     clear: both;
     transition: all 0.25s;
     justify-content: center;
@@ -129,13 +130,13 @@
 
 .faq-sections .faq-question {
     padding-top: 2vw;
-    font-size: 1.5vw;
+    font-size: 2.5vh;
     color: #F0A373;
 }
 
 .faq-sections .faq-answer {
     padding-top: 0.5vw;
-    font-size: 1.5vw;
+    font-size: 2.5vh;
     color: #C6B3AD;
 }
 
@@ -216,7 +217,7 @@
     grid-gap: 2.5vh;
     background-color: transparent;
     color: #444;
-    grid-template-rows: 20vh 22.5vh;
+    grid-template-rows: 22.5vh 22.5vh;
     grid-template-columns: repeat(1, 90vw);
 }
 
@@ -245,21 +246,21 @@
 
 .explore-sections-mobile .box .team-title {
     color: #F0A373;
-    font-size: 5vw;
+    font-size: 4vh;
     padding: 0vw 0vw 0.25vh 0vw;
     text-align: left;
 }
 
 .explore-sections-mobile .box .role {
     color: #C6B3AD;
-    font-size: 4vw;
+    font-size: 3vh;
     padding: 0vw 1vh 0vw 0vw;
     text-align: left;
 }
 
 .explore-sections-mobile .box .description {
     color: #c6b3ad;
-    font-size: 1.5vh;
+    font-size: 2.5vh;
     padding: 2vh 0vw 0vw 0vw;
     text-align: left;
 }

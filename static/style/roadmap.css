@@ -71,3 +71,71 @@ ul {
   margin-right: auto;
   border-radius: 50%;
 }
+
+.explore-sections {
+    clear: both;
+    padding-top: 2vw;
+    transition: all 0.25s;
+    justify-content: center;
+    display: grid;
+    grid-gap: 1vw;
+    background-color: transparent;
+    color: #444;
+    grid-template-rows: repeat(1, 16.5vw);
+    grid-template-columns: repeat(4, 21.5vw);
+}
+
+.explore-sections a {
+    position: relative;
+    text-decoration: none;
+    background-color: #FFD8C9;
+    color: #fff;
+    padding: 0px;
+    font-size: 1.25vw;
+    border: none;
+
+}
+
+.explore-sections a:hover {
+    background-color: #FFCCB9;
+}
+
+.explore-sections .disabled {
+    position: relative;
+    text-decoration: none;
+    background-color: #FFD8C9;
+    color: #fff;
+    padding: 0px;
+    font-size: 1.25vw;
+    border: none;
+    opacity: 0.5;
+}
+
+.explore-sections .box .team-text {
+    margin: 1vw 1vw 1vw 1vw;
+}
+
+.explore-sections .box img{
+    width: 100%;
+}
+
+.explore-sections .box .team-title {
+    color: #F0A373;
+    font-size: 2.5vw;
+    padding: 0vw 0vw 0.25vw 0vw;
+    text-align: left;
+}
+
+.explore-sections .box .role {
+    color: #C6B3AD;
+    font-size: 1.5vw;
+    padding: 0vw 1vw 0vw 0vw;
+    text-align: left;
+}
+
+.explore-sections .box .description {
+    color: #c6b3ad;
+    font-size: 1.25vw;
+    padding: 1vw 0vw 0vw 0vw;
+    text-align: left;
+}

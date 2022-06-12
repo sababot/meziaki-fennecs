@@ -540,7 +540,7 @@ canvas {
     margin: 0;
     position: fixed;
     z-index: 20;
-    transition: opacity 1s;
+    transition: all 0.5s;
 }
 
 #loader {
@@ -557,7 +557,7 @@ canvas {
   border-bottom: 1vh solid #FFA973;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
-  transition: opacity 0.25s;
+  transition: all 0.5s;
 }
 
 @-webkit-keyframes spin {
