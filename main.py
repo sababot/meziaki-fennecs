@@ -22,3 +22,7 @@ def desert():
 @app.route('/roadmap')
 def roadmap():
     return render_template('roadmap.html')
+
+@app.route('/manifesto')
+def manifesto():
+    return render_template('manifesto.html')

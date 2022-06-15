@@ -1,0 +1,29 @@
+.manifesto-text {
+	margin: 0vw 0vw 0vw 6vw;
+    font-size: 2vw;
+    color: #C6B3AD;
+}
+
+.manifesto-image {
+	width: 50vw;
+	transform: rotate(-90deg);
+	right: 0;
+	top: 7.5vw;
+    filter: drop-shadow(0vw 0vw 0.25vw #333333);
+    position: fixed;
+}
+
+.manifesto-text-mobile {
+    padding-top: 0vh;
+}
+
+.manifesto-text-mobile {
+    margin: 0vw -6vw 0vw 6vw;
+    font-size: 2.5vh;
+    color: #C6B3AD;
+}
+
+.intro-manifesto-image-mobile {
+	width: 70vh;
+	filter: drop-shadow(0vw 0vw 0.25vw #333333);
+}
