@@ -24,8 +24,8 @@
     grid-gap: auto;
     background-color: transparent;
     color: #444;
-    grid-template-rows: repeat(2, 35vw);
-    grid-template-columns: repeat(4, 20vw);
+    grid-template-rows: repeat(2, 40vw);
+    grid-template-columns: repeat(3, 28vw);
 }
 
 .team-sections a {
