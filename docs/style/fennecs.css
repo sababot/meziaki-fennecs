@@ -1,0 +1,75 @@
+* {
+    transition: color 0.35s linear, filter 0.25s linear, opacity 0.05s linear, height 0.05s linear, transform 0.05s linear, background-color 0.5s;
+}
+
+.indicator {
+    font-size: 3vw;
+    color: #F0A373;
+    border-bottom: solid;
+    border-width: 0.25vw;
+    border-color: #E9CDC3;
+}
+
+.filters {
+    width: 26vw;
+}
+
+.filters input[type=text] {
+    height: 2.1vw;
+    width: 100%;
+    font-size: 1.75vw;
+    background-color: #E9CDC3;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+.explore-sections {
+    margin-left: 2vw;
+    clear: both;
+    transition: all 0.25s;
+    padding-bottom: 2.5vw;
+    padding-left: 27.85%;
+    display: grid;
+    grid-gap: 2vw;
+    background-color: transparent;
+    color: #444;
+    grid-template-rows: repeat(4, 14.75vw);
+    grid-template-columns: repeat(4, 14.75vw);
+}
+
+.explore-sections a {
+    position: relative;
+    text-decoration: none;
+    background-color: transparent;
+    color: #fff;
+    padding: 0px;
+    font-size: 1.25vw;
+    border-radius: 2vw;
+}
+
+.nft-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    color: transparent;
+    font-size: 2vw;
+}
+
+.explore-sections .box img {
+    width: 14.75vw;
+    border-radius: 2vw;
+    box-shadow: rgba(51, 51, 51, 0.5) 0 0.3vw 0.5vw;
+}
+
+.box p:hover{
+    color: #f2a02e;
+}
+
+.box p:hover + .nft-image{
+    filter: blur(0.15vw);
+    -webkit-filter: blur(0.15vw);
+}

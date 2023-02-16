@@ -1,0 +1,141 @@
+ul {
+  list-style-type: none;
+}
+
+.accordion {
+  width: 95vw;
+  height: 82.15vh;
+  margin: 0vw 2.5vw 2.5vw 2.5vw;
+  background: #FFD8C9;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.accordion .link {
+  cursor: pointer;
+  height: 3.5vh;
+  display: block;
+  padding: 2.5vh 2vh 2vh 8.5vh;
+  background-color: #FFE2D7;
+  color: #FFA973;
+  font-size: 3.75vh;
+  border-top: solid;
+  border-width: 0.25vw;
+  border-color: #E9CDC3;
+  position: relative;
+  transition: all 0s;
+}
+
+.accordion li:last-child .link { border-bottom: 0; }
+
+.accordion li i {
+  position: absolute;
+  top: 2.25vh;
+  left: 2.5vh;
+  font-size: 3.5vh;
+  color: #ef8b4c;
+}
+
+/**
+ * Submenu
+ -----------------------------*/
+
+.submenu {
+  padding-left: 2.5vh;
+  height: 6.5vh;
+  display: none;
+  background: #FFD8C9;
+  font-size: 2.5vh;
+  color: grey;
+}
+
+.submenu li { border-bottom: 1px solid #4b4a5e; }
+
+.submenu a {
+  display: block;
+  text-decoration: none;
+  color: #d9d9d9;
+  padding: 12px;
+  padding-left: 42px;
+}
+
+.submenu a:hover {
+  background: #b63b4d;
+  color: #FFF;
+}
+
+.section {
+  padding-top: 5vw;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+}
+
+.explore-sections {
+    clear: both;
+    padding-top: 2vw;
+    transition: all 0.25s;
+    justify-content: center;
+    display: grid;
+    grid-gap: 1vw;
+    background-color: transparent;
+    color: #444;
+    grid-template-rows: repeat(1, 16.5vw);
+    grid-template-columns: repeat(4, 21.5vw);
+}
+
+.explore-sections a {
+    position: relative;
+    text-decoration: none;
+    background-color: #FFD8C9;
+    color: #fff;
+    padding: 0px;
+    font-size: 1.25vw;
+    border: none;
+
+}
+
+.explore-sections a:hover {
+    background-color: #FFCCB9;
+}
+
+.explore-sections .disabled {
+    position: relative;
+    text-decoration: none;
+    background-color: #FFD8C9;
+    color: #fff;
+    padding: 0px;
+    font-size: 1.25vw;
+    border: none;
+    opacity: 0.5;
+}
+
+.explore-sections .box .team-text {
+    margin: 1vw 1vw 1vw 1vw;
+}
+
+.explore-sections .box img{
+    width: 100%;
+}
+
+.explore-sections .box .team-title {
+    color: #F0A373;
+    font-size: 2.5vw;
+    padding: 0vw 0vw 0.25vw 0vw;
+    text-align: left;
+}
+
+.explore-sections .box .role {
+    color: #C6B3AD;
+    font-size: 1.5vw;
+    padding: 0vw 1vw 0vw 0vw;
+    text-align: left;
+}
+
+.explore-sections .box .description {
+    color: #c6b3ad;
+    font-size: 1.25vw;
+    padding: 1vw 0vw 0vw 0vw;
+    text-align: left;
+}
