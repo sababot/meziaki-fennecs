@@ -7,7 +7,7 @@ var desert = document.getElementById("desert-svg");
     }
 
     if ((window.innerWidth / window.innerHeight) < 0.75) {
-        desert.src = "../static/images/desertsvg_portrait.png";
+        desert.src = "images/desertsvg_portrait.png";
 
         //document.getElementById('rock').style.display = 'none';
 
@@ -20,7 +20,7 @@ var desert = document.getElementById("desert-svg");
     }
 
     else if ((window.innerWidth / window.innerHeight) > 1.25){
-        desert.src = "../static/images/desertsvg_landscape_compressed.webp";
+        desert.src = "images/desertsvg_landscape_compressed.webp";
 
         //document.getElementById('rock').style.display = 'block';
 
@@ -33,7 +33,7 @@ var desert = document.getElementById("desert-svg");
     }
 
     else if ((window.innerWidth / window.innerHeight) < 1.25){
-        desert.src = "../static/images/desertsvg_portrait.png";
+        desert.src = "images/desertsvg_portrait.png";
 
         //document.getElementById('rock').style.display = 'none';
 
@@ -54,7 +54,7 @@ window.addEventListener('resize', function(){
     }
 
     if ((window.innerWidth / window.innerHeight) < 0.75) {
-        desert.src = "../static/images/desertsvg_portrait.png";
+        desert.src = "images/desertsvg_portrait.png";
 
         //document.getElementById('rock').style.display = 'none';
 
@@ -67,7 +67,7 @@ window.addEventListener('resize', function(){
     }
 
     else if ((window.innerWidth / window.innerHeight) > 1.25){
-        desert.src = "../static/images/desertsvg_landscape_compressed.webp";
+        desert.src = "images/desertsvg_landscape_compressed.webp";
 
         //document.getElementById('rock').style.display = 'block';
 
@@ -80,7 +80,7 @@ window.addEventListener('resize', function(){
     }
 
     else if ((window.innerWidth / window.innerHeight) < 1.25){
-        desert.src = "../static/images/desertsvg_portrait.png";
+        desert.src = "images/desertsvg_portrait.png";
 
         //document.getElementById('rock').style.display = 'none';
 

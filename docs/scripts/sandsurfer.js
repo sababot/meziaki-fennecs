@@ -86,7 +86,7 @@ function Player(x, y, infected){
     this.draw = function(){
         // Graphics
         var img = new Image();
-        img.src = '../static/images/logo.webp';
+        img.src = 'images/logo.webp';
         c.drawImage(img, this.x, this.y, width, width)
     }
 
@@ -148,7 +148,7 @@ function Obstacle(x, speed) {
     this.draw = function(){
         // Graphics
         var img = new Image();
-        img.src = '../static/images/cactus.webp';
+        img.src = 'images/cactus.webp';
         c.drawImage(img, this.x, (canvas.height * 0.75) - width, width, width);
     }
 
